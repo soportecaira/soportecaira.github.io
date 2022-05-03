@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
     <link rel="stylesheet" href="css/responsive.css">
-    <title>Caira Edication</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
+    <script src="cognito/amazon-cognito-auth.min.js"></script>
+    <script src="cognito/amazon-cognito-identity.min.js"></script>
+    <script src="cognito/config.js"></script>
+    <title>Caira Education</title>
 </head>
 <body>
     <!-- Cabecera -->
@@ -66,15 +70,15 @@
                 <form id="form-2" style="display: none;">
                     <h3>Join Caira!</h3>
                     <div class="flex">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Surname">
+                        <input id="username" type="text" placeholder="Name">
+                        <input id="usersurname" type="text" placeholder="Surname">
                     </div>
-                    <input type="email" placeholder="Email">
+                    <input id="useremail" type="email" placeholder="Email">
                     <div class="flex">
-                        <input type="password" placeholder="Password">
-                        <input type="password" placeholder="Confirm Password">
+                        <input id="userpwd" type="password" placeholder="Password">
+                        <input id="userpwdconf" type="password" placeholder="Confirm Password">
                     </div>
-                    <input type="submit" value="Sing up"><br>
+                    <input id="signupbtn" type="submit" value="Sign up" onclick="registerButton()"><br>
                     <a href="#" id="a-form2">Already have an account? Log in</a>
                 </form>
             </div>
@@ -215,6 +219,7 @@
     </footer>
 
 <script src="main.js"></script>
+<script src="cognito/register.js"></script>
 
 </body>
 </html>
