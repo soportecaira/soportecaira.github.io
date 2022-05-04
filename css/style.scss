@@ -8,6 +8,7 @@ $cairaPurple: rgb(37, 40, 89);
 $cairaPink: rgb(251, 149, 243);
 $gradient: linear-gradient(to left, rgb(37, 40, 89), rgb(251, 149, 243));
 $logoMinSize: 120px;
+$shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 *{
     box-sizing: border-box;
@@ -16,6 +17,8 @@ body{
     border: 0;
     padding: 0;
     margin: 0;
+    background-color: $cairaWhite;
+    color: $cairaPurple;
 }    
 
 h1,h2,h3{
@@ -67,36 +70,10 @@ button{
     margin-left: 30px;
     height: auto;    
 }
-
-.text-purple{
-    h1,h2,h3,p{
-        color: $cairaPurple !important;
-    }
-}
-.text-white{
-    h1,h2,h3,p{
-        color: $cairaWhite;
-    }
-}
-.text-pink{
-    h1,h2,h3,p{
-        color: $cairaPink !important;
-    }
-    
-}
 .center-title{
     h1,h2,h3,p{
         text-align: center;
     }
-}
-.back-pink{
-    background-color: $cairaPink;
-}
-.back-white{
-    background-color: $cairaWhite;
-}
-.back-purple{
-    background-color: $cairaPurple;
 }
 
 .uni-logo{
@@ -121,6 +98,8 @@ button{
     display:flex; 
     border-radius: 40px;
     flex-direction:column;
+    background-color: white;
+    box-shadow: $shadow;
     margin: 40px;
     p{
         img{
@@ -198,6 +177,8 @@ section{
     margin: auto;
     display:flex; 
     flex-direction:column;
+    background-color: white;
+    box-shadow: $shadow;
     border-radius: 40px;
     p{
         margin: auto;
@@ -247,6 +228,7 @@ footer{
         h1,h2,p{
             margin-top: 10px;
             margin-bottom: 10px;
+            color: $cairaWhite;
         }
         h1{
             font-size: 100px;
@@ -267,8 +249,7 @@ footer{
 
 .enlaces{
     a{
-            width: 50px;
-        
+        width: 50px;  
     }
 }
 
@@ -276,6 +257,7 @@ footer{
     padding-left: 3%;
     padding-right: 3%;
     width: 30%;
+    background-color: rgba(242,242,242,0.5);
     margin-top: 10x;
     height: 450px;
     border-radius: 40px;
@@ -283,7 +265,7 @@ footer{
         text-align: center;
         }
     a{
-        color: $cairaPink;
+        color: $cairaPurple;
         text-decoration: none;
     }
     input{
@@ -304,10 +286,10 @@ footer{
         }
         &[type="text"],&[type="password"],&[type="email"]{
             width: 100%;
-            background-color: transparent;
+            background-color: $cairaWhite;
             border-radius: 30px;
             border: 2px solid $cairaPink;
-            color: $cairaPink;
+            color: $cairaPurple;
             padding: 10px;
         }
         &:focus{
@@ -318,27 +300,14 @@ footer{
     }
 }
 
+.icon{
+    width: 50px;
+}
+
 #first{
     background-image: url("../assets/Recursos/video.gif");
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.form{
-    background-image:  url("../assets/Recursos/fondo1.png");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-}
 
-// #third{
-//     background-image:  url("../assets/Recursos/fondo2.png");
-//     background-size: 40%;
-//     background-repeat: no-repeat;
-//     background-position: center right;
-// }
-// #fifth{
-//     background-image:  url("../assets/Recursos/fondo3.png");
-//     background-size: 30%;
-//     background-repeat: no-repeat;
-//     background-position: bottom left;
-// }
+

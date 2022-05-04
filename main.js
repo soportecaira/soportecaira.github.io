@@ -70,7 +70,7 @@ const cambiarMensaje = () =>{
 }
 
 window.onload = function(){
-    let logo = document.querySelector('.container');
+    //let logo = document.querySelector('.container');
     let menu = document.querySelector('.menu');
 
     let goToRegister = document.getElementById("a-form1");
@@ -81,10 +81,10 @@ window.onload = function(){
     let arrows = document.getElementsByClassName("arrow");
     let arrows2 = document.getElementsByClassName("arrow2");
 
-    logo.addEventListener('click',function(){
-        menu.classList.toggle('mobile');
-        menu.classList.toggle('showmenu');  
-    });
+    // logo.addEventListener('click',function(){
+    //     menu.classList.toggle('mobile');
+    //     menu.classList.toggle('showmenu');  
+    // });
    
     goToRegister.addEventListener("click",function(){
         login.style.display = "none";

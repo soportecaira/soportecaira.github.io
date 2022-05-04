@@ -9,6 +9,8 @@ body {
   border: 0;
   padding: 0;
   margin: 0;
+  background-color: #f2f2f2;
+  color: #252859;
 }
 
 h1, h2, h3 {
@@ -76,32 +78,8 @@ button:hover {
   height: auto;
 }
 
-.text-purple h1, .text-purple h2, .text-purple h3, .text-purple p {
-  color: #252859 !important;
-}
-
-.text-white h1, .text-white h2, .text-white h3, .text-white p {
-  color: #f2f2f2;
-}
-
-.text-pink h1, .text-pink h2, .text-pink h3, .text-pink p {
-  color: #fb95f3 !important;
-}
-
 .center-title h1, .center-title h2, .center-title h3, .center-title p {
   text-align: center;
-}
-
-.back-pink {
-  background-color: #fb95f3;
-}
-
-.back-white {
-  background-color: #f2f2f2;
-}
-
-.back-purple {
-  background-color: #252859;
 }
 
 .uni-logo {
@@ -138,6 +116,9 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 40px;
 }
 
@@ -249,6 +230,9 @@ section.no-padding {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 40px;
 }
 
@@ -311,6 +295,7 @@ footer {
 #first article h1, #first article h2, #first article p {
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #f2f2f2;
 }
 
 #first article h1 {
@@ -338,6 +323,7 @@ footer {
   padding-left: 3%;
   padding-right: 3%;
   width: 30%;
+  background-color: rgba(242, 242, 242, 0.5);
   margin-top: 10x;
   height: 450px;
   border-radius: 40px;
@@ -348,7 +334,7 @@ footer {
 }
 
 .form a {
-  color: #fb95f3;
+  color: #252859;
   text-decoration: none;
 }
 
@@ -374,10 +360,10 @@ footer {
 
 .form input[type="text"], .form input[type="password"], .form input[type="email"] {
   width: 100%;
-  background-color: transparent;
+  background-color: #f2f2f2;
   border-radius: 30px;
   border: 2px solid #fb95f3;
-  color: #fb95f3;
+  color: #252859;
   padding: 10px;
 }
 
@@ -387,16 +373,13 @@ footer {
   outline: none;
 }
 
+.icon {
+  width: 50px;
+}
+
 #first {
   background-image: url("../assets/Recursos/video.gif");
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.form {
-  background-image: url("../assets/Recursos/fondo1.png");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
 }
 /*# sourceMappingURL=style.css.map */
