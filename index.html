@@ -61,10 +61,12 @@
             <div class="back-purple text-pink form">
                 <form id="form-1">
                     <h3>Get into Caira</h3>
-                    <input type="email" placeholder="Email"><br>
-                    <input type="password" placeholder="Password"><br>
-                    <input type="submit" value="Log in"><br>
-                    <input type="submit" value="Log in with google"><br>
+                    <input id="loginEmail" type="email" placeholder="Email"><br>
+                    <input id="loginPwd"  type="password" placeholder="Password"><br>
+                    <input type="submit" value="Log in" onclick="loginButton()"><br>
+                    <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=6ja9f83ksg9vu9goatdurddl9h&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+openid+profile">
+                    <input type="button" value="Log in with google"></a><br>
+                    
                     <a href="#" id="a-form1">New to Caira? Register now!</a>
                 </form>
                 <form id="form-2" style="display: none;">
@@ -220,6 +222,6 @@
 
 <script src="main.js"></script>
 <script src="cognito/register.js"></script>
-
+<script src="cognito/login.js"></script>
 </body>
 </html>
