@@ -3,6 +3,17 @@
 }
 
 @media (max-width: 1180px) {
+    #metaverso{
+        height: auto;
+    }
+
+    #google{
+        margin-left: auto;
+        margin-right: auto ;
+    }
+    #second,#third,#fifth{
+        background-size: 0;
+    }
     #cards {
      display: none;
     }
@@ -80,9 +91,34 @@
     .ft-logo{
         margin-top: 32px;
     }
+    input[type="email"],input[type="password"]{
+        width: 60% !important;
+    }
+    .ft-text{
+        margin-top: 30px !important;
+        flex-direction: column !important;
+    }
 }
 
 @media (max-width: 850px) {
+    .ft-logo img{
+        width: 250px!important;
+        margin-top: 20px;
+    }
+ 
+    #second{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .flex-l{
+        flex-direction: column;
+    }
+    .bottom{
+        width: 100%;
+    }
+    #contact{
+        flex-direction: column;
+    }
     footer{
         grid-template-columns: 40% 60%;
     }
@@ -92,9 +128,16 @@
         margin-top: 10px !important;
         margin-left: 15px
     }
+    input[type="email"],input[type="password"]{
+        width: 75% !important;
+    }
 }
 
 @media (max-width: 700px) {
+    .ft-logo img{
+        width: 200px!important;
+        margin-top: 30px;
+    }
     .card-opinion{
         width: 300px;
     }
@@ -111,7 +154,7 @@
         font-size: 30px !important;
     }
     h3{
-        font-size: 20px !important;
+        font-size: 26px !important;
     }
     p{
         font-size: 16px !important;
@@ -122,9 +165,6 @@
     .uni-logo img, .uni-logo{
         width: 100px;
         height: 100px;
-    }
-    input{
-        width: 90% !important;
     }
     article{
         margin-bottom: 20px;
@@ -139,10 +179,23 @@
     .ft-logo{
         width: 200px;
     }
+    input[type="email"],input[type="password"]{
+        width: 75% !important;
+        width: 80% ;
+    }
     
 }  
 
 @media (max-width: 500px) {
+    .arrow{
+        width: 30px;
+    }
+    .ft-logo img{
+        width: 200px!important;
+    }
+    input[type="email"],input[type="password"]{
+        width: 90% !important;
+    }
     
     .uni-logo img, .uni-logo{
         width: 70px;
@@ -165,6 +218,22 @@
 }
 
 @media (max-width: 420px) {
+    .arrow{
+        width: 20px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+    footer{
+        flex-direction: column;
+        height: 400px;
+    }
+    .ft-logo img{
+        width: 150px!important;
+    }
+    .ft-logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
     .form{
         height: 200px;
     }

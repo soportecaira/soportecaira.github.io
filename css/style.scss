@@ -200,21 +200,27 @@ footer{
     margin: 0;
     color: $cairaWhite;
     background-image: $gradient;
-    height: 250px;
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-}
-.ft-logo{
-    width: 300px;
-    margin-top: 0;
-    padding: 0;
-}
-.mt{
-    margin-top: 80px;
-}
-.legal{ 
-    p{
-        margin-left: 4%;
+    height: 220px;
+    display: flex;
+    .ft-logo{
+        margin-top: 0;
+        padding: 0;
+        img{
+            width: 300px;
+        }
+    }
+    .ft-text{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        div{
+            margin-left: 50px;
+        }
+        .legal{
+            p{
+                margin-right: 20px;
+            }
+        }
     }
 }
 
@@ -242,15 +248,15 @@ footer{
     }
 }
 
-#map-ed{
-    margin: auto;
-    width: 90%;
+#second{
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
-.enlaces{
-    a{
-        width: 50px;  
-    }
+#map-ed{
+    margin: auto;
+    padding: auto;
+    width: 100%;
 }
 
 .form{
@@ -264,9 +270,34 @@ footer{
     h3{
         text-align: center;
         }
-    a{
+        #a-form1, #a-form2{
         color: $cairaPurple;
         text-decoration: none;
+    }
+    #lg{
+        width: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #google{
+        background-color: $cairaPink;
+        border-radius: 20px;
+
+        margin-bottom: 20px;
+        width: 240px;
+        height: 40px;
+        font-size: 20px;
+        padding: 5px;
+        text-align: center;
+        border: none;
+        a{
+            text-decoration: none;
+            color: $cairaPurple;
+            display: flex;
+        }
+        &:hover{
+            font-weight: bold;
+        }
     }
     input{
         margin-bottom: 30px;
@@ -278,6 +309,8 @@ footer{
             border-radius: 20px;
             width: 240px;
             height: 40px;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 20px;
             border: none;
             &:hover{
@@ -300,14 +333,87 @@ footer{
     }
 }
 
+#contact-form{
+    input{
+        &[type="text"],&[type="email"]{
+            width: 90%;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            border: none;
+            height: 40px;
+            padding: 20px;
+        }
+    }
+    textarea{
+        height: 200px;
+        width: 90%;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        border: none;
+        padding: 20px;
+        font-family: $font1;
+    }
+}
+.bottom{
+    width: 45%;
+    margin-bottom: 20px;
+}
+.flex-l{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+.loc{
+    margin-top: 30px;
+    display: flex;
+    justify-content: left;
+    p{
+        margin-left: 10px
+    }
+}
+
+.social{
+    justify-content: left;
+    img{
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+
 .icon{
     width: 50px;
+}
+
+#metaverso{
+    background-image: url("../assets/Recursos/Caira_espacio.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: $cairaWhite;
+    height: 700px;
 }
 
 #first{
     background-image: url("../assets/Recursos/video.gif");
     background-repeat: no-repeat;
     background-size: 100%;
+}
+#second,#third,#fifth{
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+
+#second{
+    background-image: url("../assets/Recursos/fondo3.png");
+    background-position: left 100% top -200px;
+}
+#third{
+    background-image: url("../assets/Recursos/fondo1.png");
+    background-position: left 5% top 250px;
+    background-size: 40%;
+}
+#fifth{
+    background-image: url("../assets/Recursos/fondo2.png");
+    background-position: left 90% top 300px;
 }
 
 

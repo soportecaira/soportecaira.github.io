@@ -1,6 +1,8 @@
 var poolData;
 
 function loginButton() {
+    console.log(document.getElementById("loginEmail").value);
+    console.log(document.getElementById("loginPwd").value);
     var authData = {
         Username : document.getElementById("loginEmail").value,
         Password : document.getElementById("loginPwd").value
@@ -22,6 +24,8 @@ function loginButton() {
 
     var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
 
+    event.preventDefault();
+    
     cognitoUser.authenticateUser(authDetails, {
         onSuccess: function (result) {
             //var accessToken = result.getAccessToken().getJwtToken();
@@ -43,6 +47,7 @@ function loginButton() {
         },
 
         onFailure: function (err) {
+            console.log(err.message || JSON.stringify(err));
             alert(err.message || JSON.stringify(err));
         },
     });

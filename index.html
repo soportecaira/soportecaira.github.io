@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/Iso-gradiente.ico">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
     <link rel="stylesheet" href="css/responsive.css">
@@ -11,6 +12,7 @@
     <script src="cognito/amazon-cognito-auth.min.js"></script>
     <script src="cognito/amazon-cognito-identity.min.js"></script>
     <script src="cognito/config.js"></script>
+    <noscript>We recomend you to enable scripts to use this webpage</noscript>
     <title>Caira Education</title>
 </head>
 <body>
@@ -59,14 +61,15 @@
             </article>
 
             <div class="form">
-                <form id="form-1">
+                <form id="form-1" onsubmit="loginButton()">
                     <h3>Get into Caira</h3>
                     <input id="loginEmail" type="email" placeholder="Email"><br>
                     <input id="loginPwd"  type="password" placeholder="Password"><br>
-                    <input type="submit" value="Log in" onclick="loginButton()"><br>
-                    <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
-                    <input type="button" value="Log in with google"></a><br>
-                    
+                    <input type="submit" value="Log in"><br>
+                    <div id="google">
+                        <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
+                            <img id="lg" src="assets/google-brands.svg">Google login</a><br>  
+                    </div>
                     <a href="#" id="a-form1">New to Caira? Register now!</a>
                 </form>
                 <form id="form-2" style="display: none;" onsubmit="registerButton()">
@@ -118,22 +121,22 @@
             </div>
             <div class="flex" id="cards">
                 <div class="info-card">
-                    <p><img src="assets/Iso gradiente.png"></p>
+                    <p><img src="assets/Recursos/Informate.png"></p>
                     <h3>Information</h3>
                     <p>Discover all the avialiable opctions</p>
                 </div>
                 <div class="info-card">
-                    <p><img src="assets/Iso gradiente.png"></p>
+                    <p><img src="assets/Recursos/Interactua.png"></p>
                     <h3>Interact</h3>
                     <p>Know the experiences of former students</p>
                 </div>
                 <div class="info-card">
-                    <p><img src="assets/Iso gradiente.png"></p>
+                    <p><img src="assets/Recursos/Compara.png"></p>
                     <h3>Compare</h3>
                     <p>Assess the advantages and disadvantages</p>
                 </div>
                 <div class="info-card">
-                    <p><img src="assets/Iso gradiente.png"></p>
+                    <p><img src="assets/Recursos/Lanzate.png"></p>
                     <h3>Hop up!</h3>
                     <p>Collect all you need and go on an adventure!</p>
                 </div>
@@ -162,7 +165,7 @@
             <div class="flex"><button class="purple">Join us</button></div>
         </section>
 
-        <section id="six">
+        <section id="metaverso">
             <h1>More than a social Network</h1>
             <h3>Learn about the experiences of former <br>students or facilities schools.</h3>
             <button class="pink">Coming soon</button>
@@ -177,31 +180,62 @@
                 <div class="uni-logo"><img src="assets/Iso gradiente.png"></div>
             </div>
         </section>
+        
+        <section id="contact">
+            <h1>Contact with us</h1>
+            <div class="flex-l">
+                <div class="bottom">
+                    
+                    <form id="contact-form">
+                        <input type="text" placeholder="Name"><br>
+                        <input type="text" placeholder="Email"><br>
+                        <textarea></textarea>
+                        <p><input type="checkbox">I agree with terms and conditions</p>
+                        <button class="purple" id="send-contact">Send </button>
+                    </form>
+                </div>
+
+                <div class="bottom">
+                    <p>We are at</p>
+                    <img src="assets/lanzadera.jpg">
+                    <div class="loc"><img src="assets/Recursos/"><p>Caira@caira.io</p></div>
+                    <div class="loc"><img src="assets/Recursos/"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
+                    <div class="loc"><img src="assets/Recursos/"><p>+34 600 000 000</p></div>
+
+                    <p>Follow us</p>
+                    <div class="flex social">
+                        <a href=""><img src="assets/Recursos/facebook-azul.svg"></a>
+                        <a href=""><img src="assets/Recursos/instagram-azul.svg"></a>
+                        <a href=""><img src="assets/Recursos/linkedin-azul.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!--Pie de página-->
     <footer>
-            <div>
-                <img class="ft-logo" src="assets/Logo-gris.png">
-            </div>
+        <div class="ft-logo">
+            <img src="assets/Logo-gris.png">
+        </div>
 
-            <div class="flex mt legal">
+        <div class="ft-text">
+            <div class="flex legal">
                 <p>Legal warning</p>
                 <p>Privacy policy</p>
                 <p>Cookies policy</p>
             </div>
 
-            <div class="mt social">
-                <div display="flex enlaces">
-                    <a href=""><img src="assets/Recursos/instagram-gris.svg"></a>
-                    <a href=""><img src="assets/Recursos/facebook-gris.svg"></a>
-                    <a href=""><img src="assets/Recursos/linkedin-gris.svg"></a>
-                </div> 
-                <div>
-                    <p>Caira © 2022</p>
-                </div> 
+            <div class="social">
+                <a href=""><img src="assets/Recursos/instagram-gris.svg"></a>
+                <a href=""><img src="assets/Recursos/facebook-gris.svg"></a>
+                <a href=""><img src="assets/Recursos/linkedin-gris.svg"></a>
             </div>
-            
+
+            <div>
+                <p>Caira © 2022</p>
+            </div> 
+    
         </div>
     </footer>
 

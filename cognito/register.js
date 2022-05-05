@@ -38,6 +38,8 @@ function registerButton() {
 
     attributeList.push(attributeEmail);
     attributeList.push(attributePersonalName);
+    
+    event.preventDefault();
 
     userPool.signUp(email, password, attributeList, null, function(err, result){
         if (err) {
