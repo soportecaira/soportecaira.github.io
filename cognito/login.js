@@ -24,12 +24,26 @@ function loginButton() {
 
     cognitoUser.authenticateUser(authDetails, {
         onSuccess: function (result) {
-            var accessToken = result.getAccessToken().getJwtToken();
-            console.log(accessToken);
+            //var accessToken = result.getAccessToken().getJwtToken();
+            var currentUser = userPool.getCurrentUser();
+
+            currentUser.getSession(function (err, session) {
+                console.log('Access token: ' + session.accessToken.jwtToken);
+                console.log('Refresh token: ' + session.refreshToken.token);
+                currentUser.getUserAttributes(function (err, result) {
+                    if (err) {
+                        alert(err.message || JSON.stringify(err));
+                        return;
+                    }
+                    for (i = 0; i < result.length; i++) {
+                        console.log('Atributo ' + result[i].getName() + ' con valor: ' + result[i].getValue());
+                    }
+                });
+            });
         },
 
         onFailure: function (err) {
-            console.log(err.message || JSON.stringify(err));
+            alert(err.message || JSON.stringify(err));
         },
     });
 }
