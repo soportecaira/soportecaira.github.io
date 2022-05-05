@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/Iso-gradiente.ico">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
     <link rel="stylesheet" href="css/responsive.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
     <script src="cognito/amazon-cognito-auth.min.js"></script>
     <script src="cognito/amazon-cognito-identity.min.js"></script>
     <script src="cognito/config.js"></script>
+    <noscript>We recomend you to enable scripts to use this webpage</noscript>
     <title>Caira Education</title>
 </head>
 <body>
@@ -67,7 +68,7 @@
                     <input type="submit" value="Log in" onclick="loginButton()"><br>
                     <div id="google">
                         <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=6ja9f83ksg9vu9goatdurddl9h&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+openid+profile">
-                            <i class="fab fa-google"></i>Log in with google</a><br>  
+                            <img id="lg" src="assets/google-brands.svg">Google login</a><br>  
                     </div>
                     <a href="#" id="a-form1">New to Caira? Register now!</a>
                 </form>
@@ -164,7 +165,7 @@
             <div class="flex"><button class="purple">Join us</button></div>
         </section>
 
-        <section id="six">
+        <section id="metaverso">
             <h1>More than a social Network</h1>
             <h3>Learn about the experiences of former <br>students or facilities schools.</h3>
             <button class="pink">Coming soon</button>

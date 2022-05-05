@@ -3,6 +3,10 @@
 }
 
 @media (max-width: 1180px) {
+    #metaverso{
+        height: auto;
+    }
+
     #google{
         margin-left: auto;
         margin-right: auto ;
