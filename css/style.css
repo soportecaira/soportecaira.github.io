@@ -258,25 +258,38 @@ footer {
   color: #f2f2f2;
   background-image: -webkit-gradient(linear, right top, left top, from(#252859), to(#fb95f3));
   background-image: linear-gradient(to left, #252859, #fb95f3);
-  height: 250px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 15% 70% 15%;
-      grid-template-columns: 15% 70% 15%;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.ft-logo {
-  width: 300px;
+footer .ft-logo {
   margin-top: 0;
   padding: 0;
 }
 
-.mt {
-  margin-top: 80px;
+footer .ft-logo img {
+  width: 300px;
 }
 
-.legal p {
-  margin-left: 4%;
+footer .ft-text {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .ft-text div {
+  margin-left: 50px;
+}
+
+footer .ft-text .legal p {
+  margin-right: 20px;
 }
 
 #first {
@@ -310,13 +323,15 @@ footer {
   font-size: 30px;
 }
 
-#map-ed {
-  margin: auto;
-  width: 90%;
+#second {
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
-.enlaces a {
-  width: 50px;
+#map-ed {
+  margin: auto;
+  padding: auto;
+  width: 100%;
 }
 
 .form {
@@ -333,9 +348,30 @@ footer {
   text-align: center;
 }
 
-.form a {
+.form #a-form1, .form #a-form2 {
   color: #252859;
   text-decoration: none;
+}
+
+.form #google {
+  background-color: #fb95f3;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 40px;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+}
+
+.form #google a {
+  text-decoration: none;
+  color: #252859;
+}
+
+.form #google:hover {
+  font-weight: bold;
 }
 
 .form input {
@@ -350,6 +386,8 @@ footer {
   border-radius: 20px;
   width: 240px;
   height: 40px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 20px;
   border: none;
 }
@@ -373,6 +411,68 @@ footer {
   outline: none;
 }
 
+#contact-form input[type="text"], #contact-form input[type="email"] {
+  width: 90%;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  border: none;
+  height: 40px;
+  padding: 20px;
+}
+
+#contact-form textarea {
+  height: 200px;
+  width: 90%;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 20px;
+  font-family: "Poppins";
+}
+
+.bottom {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.flex-l {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.loc {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.loc p {
+  margin-left: 10px;
+}
+
+.social {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.social img {
+  width: 30px;
+  margin-right: 10px;
+}
+
 .icon {
   width: 50px;
 }
@@ -381,5 +481,26 @@ footer {
   background-image: url("../assets/Recursos/video.gif");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+#second, #third, #fifth {
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+#second {
+  background-image: url("../assets/Recursos/fondo3.png");
+  background-position: left 100% top -200px;
+}
+
+#third {
+  background-image: url("../assets/Recursos/fondo1.png");
+  background-position: left 5% top 250px;
+  background-size: 40%;
+}
+
+#fifth {
+  background-image: url("../assets/Recursos/fondo2.png");
+  background-position: left 90% top 300px;
 }
 /*# sourceMappingURL=style.css.map */
