@@ -43,8 +43,8 @@ button {
   width: 200px;
   height: 50px;
   font-size: 20px;
-  -webkit-transition: width 0.5s linear 0.2s,height 0.5s linear 0.2s,font-size 0.5s linear 0.2s;
-  transition: width 0.5s linear 0.2s,height 0.5s linear 0.2s,font-size 0.5s linear 0.2s;
+  -webkit-transition: width 0.2s linear 0.2s,height 0.2s linear 0.2s,font-size 0.2s linear 0.2s;
+  transition: width 0.2s linear 0.2s,height 0.2s linear 0.2s,font-size 0.2s linear 0.2s;
 }
 
 button.pink {
@@ -61,6 +61,11 @@ button:hover {
   width: 220px;
   height: 60px;
   font-size: 25px;
+}
+
+button a {
+  text-decoration: none;
+  color: #252859;
 }
 
 .flex {
@@ -255,6 +260,7 @@ section.no-padding {
 
 footer {
   margin: 0;
+  bottom: 0;
   color: #f2f2f2;
   background-image: -webkit-gradient(linear, right top, left top, from(#252859), to(#fb95f3));
   background-image: linear-gradient(to left, #252859, #fb95f3);
@@ -337,11 +343,23 @@ footer .ft-text .legal p {
 .form {
   padding-left: 3%;
   padding-right: 3%;
-  width: 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35%;
   background-color: rgba(242, 242, 242, 0.5);
   margin-top: 10x;
-  height: 450px;
+  height: 540px;
   border-radius: 40px;
+}
+
+.form .f-arrow {
+  width: 20px;
+  margin-left: 20px;
+}
+
+.form .f-arrow img {
+  width: 20px;
 }
 
 .form h3 {
@@ -351,19 +369,21 @@ footer .ft-text .legal p {
 .form #a-form1, .form #a-form2 {
   color: #252859;
   text-decoration: none;
+  margin-left: 2%;
 }
 
-.form #lg {
+.form .lg {
   width: 20px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.form #google {
-  background-color: #fb95f3;
+.form .google {
+  background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  width: 240px;
+  width: 300px;
+  margin-left: 2%;
   height: 40px;
   font-size: 20px;
   padding: 5px;
@@ -371,15 +391,16 @@ footer .ft-text .legal p {
   border: none;
 }
 
-.form #google a {
+.form .google a {
   text-decoration: none;
   color: #252859;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 2%;
 }
 
-.form #google:hover {
+.form .google:hover {
   font-weight: bold;
 }
 
@@ -393,9 +414,9 @@ footer .ft-text .legal p {
   background-color: #fb95f3;
   color: #252859;
   border-radius: 20px;
-  width: 240px;
+  width: 120px;
   height: 40px;
-  margin-left: auto;
+  margin-left: 2%;
   margin-right: auto;
   font-size: 20px;
   border: none;
@@ -471,10 +492,15 @@ footer .ft-text .legal p {
   margin-left: 10px;
 }
 
+.loc img {
+  width: 20px;
+}
+
 .social {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  margin-top: 13px;
 }
 
 .social img {

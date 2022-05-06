@@ -42,8 +42,8 @@ const cambiarInfo = () =>{
     let sub = document.getElementById("in-sub");
     let img = document.getElementById("in-img");
 
-    let n_title = document.createTextNode(cairaInfo[p].title);
-    let n_sub = document.createTextNode(cairaInfo[p].subtitle);
+    let n_title = document.createTextNode(cairaInfo[p2].title);
+    let n_sub = document.createTextNode(cairaInfo[p2].subtitle);
     let n_img = cairaInfo[p].image;
 
     title.removeChild(title.firstChild);
@@ -71,28 +71,30 @@ const cambiarMensaje = () =>{
 
 window.onload = function(){
     //let logo = document.querySelector('.container');
-    let menu = document.querySelector('.menu');
+    //let menu = document.querySelector('.menu');
+    // logo.addEventListener('click',function(){
+    //     menu.classList.toggle('mobile');
+    //     menu.classList.toggle('showmenu');  
+    // });
 
     let goToRegister = document.getElementById("a-form1");
     let goToLogin = document.getElementById("a-form2");
     let login = document.getElementById("form-1");
     let register = document.getElementById("form-2");
+    let form = document.getElementsByClassName("form")[0];
 
     let arrows = document.getElementsByClassName("arrow");
     let arrows2 = document.getElementsByClassName("arrow2");
-
-    // logo.addEventListener('click',function(){
-    //     menu.classList.toggle('mobile');
-    //     menu.classList.toggle('showmenu');  
-    // });
    
     goToRegister.addEventListener("click",function(){
         login.style.display = "none";
         register.style.display = "block";
+        form.style.height = "540px";
     });
     goToLogin.addEventListener("click",function(){
         login.style.display = "block";
         register.style.display = "none";
+        form.style.height = "450px";
     });
 
     arrows[0].addEventListener("click", function(){
@@ -107,20 +109,23 @@ window.onload = function(){
         if(p==mensajes.length){
             p=0;
         }
+        
         cambiarMensaje();
     });
+
     arrows2[0].addEventListener("click", function(){
-        p--;
-        if(p<0){
-            p=3;
+        p2--;
+        if(p2<0){
+            p2=cairaInfo.length-1;
         }
         cambiarInfo();
     });
     arrows2[1].addEventListener("click", function(){
-        p++;
-        if(p==cairaInfo.length){
-            p=0;
+        p2++;
+        if(p2==cairaInfo.length){
+            p2=0;
         }
+        console.log(cairaInfo.length)
         cambiarInfo();
     });
 }

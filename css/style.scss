@@ -46,7 +46,7 @@ button{
     width: 200px;
     height: 50px;
     font-size: 20px;
-    transition: width 0.5s linear 0.2s,height 0.5s linear 0.2s,font-size 0.5s linear 0.2s;
+    transition: width 0.2s linear 0.2s,height 0.2s linear 0.2s,font-size 0.2s linear 0.2s;
     &.pink{
         border: 2px solid $cairaPink;
         color: $cairaPink
@@ -59,6 +59,10 @@ button{
         width: 220px;
         height: 60px;
         font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+        color: $cairaPurple;
     }
 }
 .flex{
@@ -198,6 +202,7 @@ section{
 
 footer{
     margin: 0;
+    bottom: 0;
     color: $cairaWhite;
     background-image: $gradient;
     height: 220px;
@@ -262,29 +267,38 @@ footer{
 .form{
     padding-left: 3%;
     padding-right: 3%;
-    width: 30%;
+    justify-content: center;
+    width: 35%;
     background-color: rgba(242,242,242,0.5);
     margin-top: 10x;
-    height: 450px;
+    height: 540px;
     border-radius: 40px;
+    .f-arrow{
+        width: 20px;
+        margin-left: 20px;
+        img{
+            width: 20px; 
+        }
+    }
     h3{
         text-align: center;
         }
         #a-form1, #a-form2{
         color: $cairaPurple;
         text-decoration: none;
+        margin-left: 2%;
     }
-    #lg{
+    .lg{
         width: 20px;
         margin-left: 20px;
         margin-right: 20px;
     }
-    #google{
-        background-color: $cairaPink;
+    .google{
+        background-color: white;
         border-radius: 20px;
-
         margin-bottom: 20px;
-        width: 240px;
+        width: 300px;
+        margin-left: 2%;
         height: 40px;
         font-size: 20px;
         padding: 5px;
@@ -294,6 +308,7 @@ footer{
             text-decoration: none;
             color: $cairaPurple;
             display: flex;
+            margin-left: 2%;
         }
         &:hover{
             font-weight: bold;
@@ -307,9 +322,9 @@ footer{
             background-color: $cairaPink;
             color: $cairaPurple;
             border-radius: 20px;
-            width: 240px;
+            width: 120px;
             height: 40px;
-            margin-left: auto;
+            margin-left: 2%;
             margin-right: auto;
             font-size: 20px;
             border: none;
@@ -370,10 +385,14 @@ footer{
     p{
         margin-left: 10px
     }
+    img{
+        width: 20px;
+    }
 }
 
 .social{
     justify-content: left;
+    margin-top: 13px;
     img{
         width: 30px;
         margin-right: 10px;
