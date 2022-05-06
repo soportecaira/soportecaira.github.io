@@ -69,11 +69,19 @@
                     <div id="google">
                         <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
                             <img id="lg" src="assets/google-brands.svg">Google login</a><br>  
+                <form id="form-1" style="display: none;">
+                    <div class="flex"><h3>Get into Caira</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                    <input id="loginEmail" type="email" placeholder="Email"><br>
+                    <input id="loginPwd"  type="password" placeholder="Password"><br>
+                    <input type="submit" value="Log in" onclick="loginButton()"><br>
+                    <div class="google">
+                        <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=6ja9f83ksg9vu9goatdurddl9h&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+openid+profile">
+                            <img class="lg" src="assets/google-brands.svg">Login with Google </a><br>  
                     </div>
                     <a href="#" id="a-form1">New to Caira? Register now!</a>
                 </form>
-                <form id="form-2" style="display: none;" onsubmit="registerButton()">
-                    <h3>Join Caira!</h3>
+                <form id="form-2" onsubmit="registerButton()">
+                    <div class="flex"><h3>Join Caira</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
                     <div class="flex">
                         <input id="username" type="text" placeholder="Name">
                         <input id="usersurname" type="text" placeholder="Surname">
@@ -84,6 +92,10 @@
                         <input id="userpwdconf" type="password" placeholder="Confirm Password">
                     </div>
                     <input id="signupbtn" type="submit" value="Sign up"><br>
+                    <div class="google">
+                        <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=6ja9f83ksg9vu9goatdurddl9h&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+openid+profile">
+                            <img class="lg" src="assets/google-brands.svg">Register with Google </a><br>  
+                    </div>
                     <a href="#" id="a-form2">Already have an account? Log in</a>
                 </form>
             </div>
@@ -114,7 +126,7 @@
                     <div class="info-card back-white text-purple">
                         <p id="in-img"><img src="assets/Iso gradiente.png"></p>
                         <h3 id="in-title">Information</h3>
-                        <p id="in-sub">Discover all the avialiable opctions</p>
+                        <p id="in-sub">Discover all the avaliable options</p>
                     </div>
                     <div class="arrow2 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
                 </div>
@@ -162,7 +174,7 @@
                     <div class="arrow right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
                 </div>
             </div>
-            <div class="flex"><button class="purple">Join us</button></div>
+            <div class="flex"><button class="purple"><a href="#form-2">Join us</a></button></div>
         </section>
 
         <section id="metaverso">
@@ -173,11 +185,53 @@
 
         <section class="center-title" id="seventh">
             <h1>Universities all above the world</h1>
-            <div class="flex">
-                <div class="uni-logo"><img src="assets/Iso gradiente.png"></div>
-                <div class="uni-logo"><img src="assets/Iso gradiente.png"></div>
-                <div class="uni-logo"><img src="assets/Iso gradiente.png"></div>
-                <div class="uni-logo"><img src="assets/Iso gradiente.png"></div>
+            <div class="lanz"><img src="assets/Recursos/lanzadera.png"></div>
+
+            <div class="slider">
+                <div class="uni-logo">
+                    <img class="partner" src="" height="100" width="250" alt="" />
+                </div>
+                <div class="uni-logo">
+                    <img class="partner" src="" height="100" width="250" alt="" />
+                </div>
+                <div class="uni-logo">
+                    <img class="partner" src="" height="100" width="250" alt="" />
+                </div>
+                <div class="uni-logo">
+                    <img class="partner" src="" height="100" width="250" alt="" />
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="contact">
+            <h1>Contact with us</h1>
+            <div class="flex-l">
+                <div class="bottom">
+                    
+                    <form id="contact-form">
+                        <input type="text" placeholder="Name"><br>
+                        <input type="text" placeholder="Email"><br>
+                        <textarea></textarea>
+                        <p><input type="checkbox">I agree with terms and conditions</p>
+                        <button class="purple" id="send-contact">Send </button>
+                    </form>
+                </div>
+
+                <div class="bottom">
+                    <p>We are at</p>
+                    <img class="lanz" src="assets/Recursos/lanzadera.png">
+                    <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
+                    <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
+                    <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
+
+                    <p>Follow us</p>
+                    <div class="flex social">
+                        <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-azul.svg"></a>
+                        <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-azul.svg"></a>
+                        <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-azul.svg"></a>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -230,6 +284,9 @@
                 <a href=""><img src="assets/Recursos/instagram-gris.svg"></a>
                 <a href=""><img src="assets/Recursos/facebook-gris.svg"></a>
                 <a href=""><img src="assets/Recursos/linkedin-gris.svg"></a>
+                <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-gris.svg"></a>
+                <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-gris.svg"></a>
+                <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-gris.svg"></a>
             </div>
 
             <div>
