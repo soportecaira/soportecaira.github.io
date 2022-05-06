@@ -34,8 +34,11 @@ let cairaInfo = [
     }
 ];
 
+let partners = [ ["ada-logo.png","ada-logo.png","ada-logo.png","ada-logo.png"],["Informate.png","","",""] ]
+
 let p = 0;
 let p2 = 0;
+let pt = 0;
 
 const cambiarInfo = () =>{
     let title = document.getElementById("in-title");
@@ -96,6 +99,17 @@ window.onload = function(){
         register.style.display = "none";
         form.style.height = "450px";
     });
+
+    setInterval(function(){
+        let part = document.getElementsByClassName("partner");
+        for(let i=0; i<part.length; i++){
+            part[0].setAttribute("src", "assets/Recursos/"+partners[pt][i]);
+        }
+        pt++;
+        if(pt==partners.length){
+            pt=0;
+        }
+    }, 2000);
 
     arrows[0].addEventListener("click", function(){
         p--;

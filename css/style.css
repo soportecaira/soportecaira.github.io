@@ -87,29 +87,6 @@ button a {
   text-align: center;
 }
 
-.uni-logo {
-  border-radius: 100%;
-  background: -webkit-gradient(linear, right top, left top, from(#252859), to(#fb95f3));
-  background: linear-gradient(to left, #252859, #fb95f3);
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 200px;
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.uni-logo img {
-  margin: auto;
-  border-radius: 100%;
-  width: 190px;
-  height: 190px;
-}
-
 .info-card {
   height: 400px;
   width: 300px;
@@ -493,7 +470,9 @@ footer .ft-text .legal p {
 }
 
 .loc img {
-  width: 20px;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
 }
 
 .social {
@@ -545,5 +524,50 @@ footer .ft-text .legal p {
 #fifth {
   background-image: url("../assets/Recursos/fondo2.png");
   background-position: left 90% top 300px;
+}
+
+.slider {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+}
+
+.uni-logo {
+  border-radius: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#252859), to(#fb95f3));
+  background: linear-gradient(to left, #252859, #fb95f3);
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uni-logo img {
+  margin: auto;
+  border-radius: 100%;
+  width: 148px;
+  height: 148px;
+}
+
+.lanz {
+  width: 300px;
+  margin: auto;
+}
+
+.lanz img {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */

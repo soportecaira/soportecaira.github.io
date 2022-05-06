@@ -84,9 +84,13 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .uni-logo img, .uni-logo{
-        width: 150px;
-        height: 150px;
+    .uni-logo{
+        width: 148px;
+        height: 148px;
+    }
+    .uni-logo img{
+        width: 148px;
+        height: 148px;
     }
     .ft-logo{
         margin-top: 32px;

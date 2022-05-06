@@ -80,22 +80,6 @@ button{
     }
 }
 
-.uni-logo{
-    border-radius: 100%;
-    background: $gradient;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    img{
-        margin: auto;
-        border-radius: 100%;
-        width: 190px;
-        height: 190px;
-    }
-}
 .info-card{
     height: 400px;
     width: 300px;
@@ -386,7 +370,9 @@ footer{
         margin-left: 10px
     }
     img{
-        width: 20px;
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
     }
 }
 
@@ -434,5 +420,38 @@ footer{
     background-image: url("../assets/Recursos/fondo2.png");
     background-position: left 90% top 300px;
 }
+
+.slider {
+	margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+.uni-logo{
+    border-radius: 100%;
+    background: $gradient;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    img{
+        margin: auto;
+        border-radius: 100%;
+        width: 148px;
+        height: 148px;
+    }
+}
+.lanz{
+    width: 300px;
+    margin: auto;
+    img{
+        width: 300px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+}
+
 
 
