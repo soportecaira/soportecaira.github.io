@@ -121,63 +121,6 @@ button a {
   margin-bottom: 0;
 }
 
-.big-circle {
-  border-bottom-right-radius: 50%;
-  border-top-right-radius: 50%;
-  height: 900px;
-  width: 60%;
-  padding: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.big-circle p {
-  font-size: 25px;
-  width: 70%;
-  text-align: justify;
-}
-
-.anti-circle {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.anti-circle .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 80px;
-  height: 300px;
-  width: 300px;
-}
-
-.small-circle {
-  background-color: #fb95f3 !important;
-  border-radius: 100%;
-  width: 80px;
-  height: 80px;
-}
-
 section {
   padding: 5%;
 }

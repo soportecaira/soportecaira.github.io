@@ -104,41 +104,6 @@ button{
         margin-bottom: 0;
     }
 }
-.big-circle{
-    border-bottom-right-radius: 50%;
-    border-top-right-radius: 50%;
-    height: 900px;
-    width: 60%;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    p{
-        font-size: 25px;
-        width: 70%;
-        text-align: justify;
-    }
-}
-.anti-circle{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    .container{
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        margin-left: 80px;
-        height: 300px;
-        width: 300px;
-    }
-}
-.small-circle{
-    background-color: $cairaPink !important;
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-}
 
 section{
     padding: 5%;
