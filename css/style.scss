@@ -401,7 +401,7 @@ footer{
     height: 150px;
     display: flex;
     align-items: center;
-    img{
+    img, a{
         margin: auto;
         border-radius: 100%;
         width: 143px;
@@ -409,10 +409,10 @@ footer{
     }
 }
 .lanz{
-    width: 300px;
+    width: 500px;
     margin: auto;
     img{
-        width: 300px;
+        width: 500px;
         margin: auto;
         margin-bottom: 40px;
     }

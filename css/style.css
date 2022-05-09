@@ -496,7 +496,7 @@ footer .ft-text .legal p {
           align-items: center;
 }
 
-.uni-logo img {
+.uni-logo img, .uni-logo a {
   margin: auto;
   border-radius: 100%;
   width: 143px;
@@ -504,12 +504,12 @@ footer .ft-text .legal p {
 }
 
 .lanz {
-  width: 300px;
+  width: 500px;
   margin: auto;
 }
 
 .lanz img {
-  width: 300px;
+  width: 500px;
   margin: auto;
   margin-bottom: 40px;
 }
