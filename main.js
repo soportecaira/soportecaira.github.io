@@ -1,3 +1,7 @@
+let p = 0;
+let p2 = 0;
+let pt = 0;
+
 let mensajes = [
     {
         message: "Aquí el estudiante escribirá lo fantastica y maravillosa que es Caira y el increible diseño de su web.",
@@ -34,11 +38,25 @@ let cairaInfo = [
     }
 ];
 
-let partners = [ ["ada-logo.png","ada-logo.png","ada-logo.png","ada-logo.png"],["Informate.png","","",""] ]
+let partners = [ 
+    ["ada.jpg","bcas.png","isam.jpg","trepcamp.png"],
+    ["4geeks.png","assembler.jpg","hult.png","ironhack.jpg"],
+    ["retail.png","siena.png","sige.png","techma.png"],
+    ["unavir.jpg","Iso gradiente.png","Iso gradiente.png","Iso gradiente.png"]
+];
 
-let p = 0;
-let p2 = 0;
-let pt = 0;
+setInterval(function(){
+    let part = document.getElementsByClassName("partner");
+    for(let i=0; i<part.length; i++){
+        part[i].setAttribute("src", "assets/Recursos/logos/"+partners[pt][i]);
+    }
+    pt++;
+    if(pt==partners.length){
+        pt=0;
+    }
+}, 3000);
+
+
 
 const cambiarInfo = () =>{
     let title = document.getElementById("in-title");
@@ -88,7 +106,7 @@ window.onload = function(){
 
     let arrows = document.getElementsByClassName("arrow");
     let arrows2 = document.getElementsByClassName("arrow2");
-   
+   /*
     goToRegister.addEventListener("click",function(){
         login.style.display = "none";
         register.style.display = "block";
@@ -98,18 +116,9 @@ window.onload = function(){
         login.style.display = "block";
         register.style.display = "none";
         form.style.height = "450px";
-    });
+    });*/
 
-    setInterval(function(){
-        let part = document.getElementsByClassName("partner");
-        for(let i=0; i<part.length; i++){
-            part[0].setAttribute("src", "assets/Recursos/"+partners[pt][i]);
-        }
-        pt++;
-        if(pt==partners.length){
-            pt=0;
-        }
-    }, 2000);
+    
 
     arrows[0].addEventListener("click", function(){
         p--;

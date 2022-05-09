@@ -1,6 +1,22 @@
 #cards-resp{
     display: none;
 }
+@media (min-width: 1920px) {
+    h1{
+        font-size: 58px;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 46px;
+        font-weight: bold;
+    }
+    h3{
+        font-size: 38px;
+    }
+    p,a{
+        font-size: 30px;
+    }
+}
 
 @media (max-width: 1180px) {
     #metaverso{
@@ -84,14 +100,6 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .uni-logo{
-        width: 148px;
-        height: 148px;
-    }
-    .uni-logo img{
-        width: 148px;
-        height: 148px;
-    }
     .ft-logo{
         margin-top: 32px;
     }
@@ -170,7 +178,11 @@
     #first{
         height: 700px;
     }
-    .uni-logo img, .uni-logo{
+    .uni-logo img{
+        width: 93px;
+        height: 93px;
+    }
+    .uni-logo{
         width: 100px;
         height: 100px;
     }
@@ -205,7 +217,11 @@
         width: 90% !important;
     }
     
-    .uni-logo img, .uni-logo{
+    .uni-logo img{
+        width: 65px;
+        height: 65px;
+    }
+    .uni-logo{
         width: 70px;
         height: 70px;
     }
@@ -264,13 +280,13 @@
     p{
         font-size: 14px !important;
     }
-    .uni-logo img, .uni-logo{
-        width: 55px;
-        height: 55px;
+    .uni-logo img{
+        width: 50px;
+        height: 50px;
 
     }
     .uni-logo{        
-        margin-left: 5px ;
-        margin-right: 5px ;
+        width: 55px;
+        height: 55px;
     }
 }
