@@ -334,7 +334,7 @@ footer .ft-text .legal p {
   background-color: #fb95f3;
   color: #252859;
   border-radius: 20px;
-  width: 120px;
+  width: 140px;
   height: 40px;
   margin-left: 2%;
   margin-right: auto;
@@ -383,6 +383,10 @@ footer .ft-text .legal p {
 .bottom {
   width: 45%;
   margin-bottom: 20px;
+}
+
+#b2 {
+  margin-top: -20px;
 }
 
 .flex-l {
@@ -504,13 +508,55 @@ footer .ft-text .legal p {
 }
 
 .lanz {
-  width: 500px;
+  width: 400px;
   margin: auto;
 }
 
 .lanz img {
-  width: 500px;
+  width: 400px;
   margin: auto;
   margin-bottom: 40px;
+}
+
+#center-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#center-1 article {
+  width: 600px;
+  height: 300px;
+}
+
+#center-1 .form {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 120px;
+}
+
+#center-1 .form form {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 400px;
+  height: 450px;
+  padding: 5%;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.pages p {
+  margin-top: 52px;
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.pages p a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

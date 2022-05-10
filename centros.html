@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/Iso-gradiente.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
+    <script src="cognito/amazon-cognito-auth.min.js"></script>
+    <script src="cognito/amazon-cognito-identity.min.js"></script>
+    <script src="cognito/config.js"></script>
+    <noscript>We recomend you to enable scripts to use this webpage</noscript>
+    <title>Caira Education</title>
+</head>
+<body>
+    <main>
+        <div class="flex">
+            <div><img src="assets/Logo-gradiente.png" class="logo"></div>
+            <div class="flex pages">
+                <p>Students</p>
+                <p>Centers</p>
+            </div>
+        </div>
+
+        <section class="flex" id="center-1">   
+            <article>
+                <h1>We approach students to your institution</h1>
+                <p>Make it easy for the student to connect with you. Help him grow personally and professionally.</p>
+            </article>
+
+            <div class="form">
+                <form>
+                    <div class="flex"><h3>Contact with us</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                    <input type="text" placeholder="Name"><br>
+                    <input type="text" placeholder="Company"><br>
+                    <input type="email" placeholder="Email"><br>
+                    <input type="submit" id="book" value="Book a call"><br>
+                </form>
+            </div>
+        </section>
+
+        <section class="center-title" id="third">
+            <h1>We grow together</h1>
+            <p class="text-pink">Your success is our success</p>
+            <br>
+            <div id="cards-resp">
+                <div class="flex">
+                    <div class="arrow2 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
+                    <div class="info-card back-white text-purple">
+                        <p id="in-img"><img src="assets/Iso gradiente.png"></p>
+                        <h3 id="in-title">Information</h3>
+                        <p id="in-sub">Discover all the avaliable options</p>
+                    </div>
+                    <div class="arrow2 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
+                </div>
+            </div>
+            <div class="flex" id="cards">
+                <div class="info-card">
+                    <p><img src="assets/Recursos/Informate.png"></p>
+                    <h3>Get students</h3>
+                    <p>We make you a setup and
+                        we decided on a strategy
+                        to get students.</p>
+                </div>
+                <div class="info-card">
+                    <p><img src="assets/Recursos/Interactua.png"></p>
+                    <h3>A new channel</h3>
+                    <p>Create content to receive leads. Manage a new uptake channel.</p>
+                </div>
+                <div class="info-card">
+                    <p><img src="assets/Recursos/Compara.png"></p>
+                    <h3>We share the success</h3>
+                    <p>Our work gives its fruits. we don't win if you don't win</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="center-title" id="seventh">
+            <h1>Boosted by:</h1>
+            <div class="lanz"><img src="assets/Recursos/lanzadera.png"></div>
+            <h3>Some of our partners:</h3>
+            <div class="slider">
+                <div class="uni-logo">
+                    <a class="link" href="" target="_blank"><img class="partner" src="" alt=""/></a>
+                </div>
+                <div class="uni-logo">
+                    <a class="link" href="" target="_blank"><img class="partner" src="" alt=""/></a>
+                </div>
+                <div class="uni-logo">
+                    <a class="link" href="" target="_blank"><img class="partner" src="" alt=""/></a>
+                </div>
+                <div class="uni-logo">
+                    <a class="link" href="" target="_blank"><img class="partner" src="" alt=""/></a>
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="contact">
+            <h1>Contact with us</h1>
+            <div class="flex-l">
+                <div class="bottom">
+                    
+                    <form id="contact-form" action="https://formsubmit.co/caira@caira.io" method="POST">
+                        <input type="text" placeholder="Name"><br>
+                        <input type="text" name="email" placeholder="Email"><br>
+                        <input type="hidden" name="_captcha" value="false"/>
+                        <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/>
+                        <input type="hidden" name="_template" value="table"/>
+                        <input type="hidden" name="_next" value={window.location.href}></input>
+                        <textarea name="message"></textarea>
+                        <p><input type="checkbox">I agree with terms and conditions</p>
+                        <button type="submit" class="purple" id="send-contact">Send </button>
+                    </form>
+                </div>
+
+                <div class="bottom" id="b2">
+                    <p>We are at</p>
+                    <img class="lanz" src="assets/Recursos/lanzadera.png">
+                    <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
+                    <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
+                    <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
+
+                    <p>Follow us</p>
+                    <div class="flex social">
+                        <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-azul.svg"></a>
+                        <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-azul.svg"></a>
+                        <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-azul.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!--Pie de página-->
+<footer>
+    <div class="ft-logo">
+        <img src="assets/Logo-gris.png">
+    </div>
+
+    <div class="ft-text">
+        <div class="flex legal">
+            <p>Legal warning</p>
+            <p>Privacy policy</p>
+            <p>Cookies policy</p>
+        </div>
+
+        <div class="social">
+            <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-gris.svg"></a>
+            <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-gris.svg"></a>
+            <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-gris.svg"></a>
+        </div>
+
+        <div>
+            <p>Caira © 2022</p>
+        </div> 
+
+    </div>
+</footer>
+<script src="main.js"></script>
+<script src="cognito/register.js"></script>
+<script src="cognito/login.js"></script>
+</body>
+</html>

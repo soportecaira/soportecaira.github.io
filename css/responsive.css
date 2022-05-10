@@ -19,19 +19,36 @@
 }
 
 @media (max-width: 1180px) {
+    #center-1{
+        flex-direction: column;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    #center-1 article{
+        text-align: center;
+        width: 100%;
+    }
+    #center-1 .form{
+        width: 100%;
+        margin: 0;
+        padding-left: 0px;
+    }
+    #center-1 form{
+        width: 100% !important;
+        height: 300px;
+    }
     #metaverso{
         height: auto;
     }
-
     #google{
         margin-left: auto;
-        margin-right: auto ;
+        margin-right: auto;
     }
     #second,#third,#fifth{
         background-size: 0;
     }
     #cards {
-     display: none;
+        display: none;
     }
     #cards-resp{
         display: block;
@@ -45,14 +62,14 @@
         padding: 0 !important;
         background-image: none;
     }
-    .form{
+    #first .form{
         margin: auto;
         width: 100%;
         border-radius: 0;
         height: 300px;
         margin-top: 5%;
     }
-    article{
+    #first article{
         margin: 0 0 0 0 !important;
         padding-top: 30px;
         padding-bottom: 30px;
@@ -66,28 +83,6 @@
         align-items: center;
         justify-content: center;
     }
-    .big-circle{
-        border-bottom-right-radius: 50%;
-        border-bottom-left-radius: 50%;
-        border-top-right-radius: 0%;
-        border-top-left-radius: 0%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .anti-circle{
-        width: 100%;
-        justify-content: center;
-        flex-direction: row;
-    }
-    .container{
-        width: 40% !important;
-        margin: 10% !important;
-        padding: 0 !important;
-        height: 350px !important;
-    }
-    
     #sec2{
         flex-direction: column !important; 
     }
@@ -103,9 +98,6 @@
     .ft-logo{
         margin-top: 32px;
     }
-    input[type="email"],input[type="password"]{
-        width: 60% !important;
-    }
     .ft-text{
         margin-top: 30px !important;
         flex-direction: column !important;
@@ -117,6 +109,9 @@
 }
 
 @media (max-width: 850px) {
+    #center-1 article{
+        height: 350px;
+    }
     .ft-logo img{
         width: 250px!important;
         margin-top: 20px;
@@ -143,9 +138,6 @@
         flex-direction: row;
         margin-top: 10px !important;
         margin-left: 15px
-    }
-    input[type="email"],input[type="password"]{
-        width: 75% !important;
     }
 }
 
@@ -189,38 +181,25 @@
         width: 100px;
         height: 100px;
     }
-    article{
+    #first article{
         margin-bottom: 20px;
         margin-top: 100px;
     }
-    .big-circle{
-        height: 690px !important;
-    }
-    .container{
-        height: 380px !important;
+    #center-1 article{
+        height: 430px;
     }
     .ft-logo{
         width: 200px;
-    }
-    input[type="email"],input[type="password"]{
-        width: 75% !important;
-        width: 80% ;
-    }
-    
+    }  
 }  
 
 @media (max-width: 500px) {
-   
     .arrow{
         width: 30px;
     }
     .ft-logo img{
         width: 200px!important;
     }
-    input[type="email"],input[type="password"]{
-        width: 90% !important;
-    }
-    
     .uni-logo img{
         width: 65px;
         height: 65px;
@@ -239,13 +218,19 @@
     .ft-logo{
         width: 150px;
     }
-    article{
+    #first article{
         padding-bottom: 50px !important;
+    }
+    #center-1 article{
+        height: 500px;
     }
    
 }
 
 @media (max-width: 420px) {
+    .lanz img, .lanz{
+        width: 200px;
+    }
     .arrow{
         width: 20px;
         margin-right: 3px;
@@ -262,12 +247,16 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .form{
+    #first .form{
         height: 200px;
     }
-    article{ 
+    #first article{ 
         height: 200px;
         padding-top: 10px;
+    }
+    #center-1 article{ 
+        height: 6%;
+        margin-bottom: 20px;
     }
     article h1{
         font-size: 40px !important;
@@ -290,7 +279,7 @@
 
     }
     .uni-logo{        
-        width: 55px;
-        height: 55px;
+        width: 51px;
+        height: 51px;
     }
 }

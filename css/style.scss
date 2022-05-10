@@ -271,7 +271,7 @@ footer{
             background-color: $cairaPink;
             color: $cairaPurple;
             border-radius: 20px;
-            width: 120px;
+            width: 140px;
             height: 40px;
             margin-left: 2%;
             margin-right: auto;
@@ -321,6 +321,9 @@ footer{
 .bottom{
     width: 45%;
     margin-bottom: 20px;
+}
+#b2{
+    margin-top: -20px;
 }
 .flex-l{
     display: flex;
@@ -409,12 +412,45 @@ footer{
     }
 }
 .lanz{
-    width: 500px;
+    width: 400px;
     margin: auto;
     img{
-        width: 500px;
+        width: 400px;
         margin: auto;
         margin-bottom: 40px;
+    }
+}
+
+#center-1{
+    display: flex;
+    article{
+        width: 600px;
+        height: 300px;
+    }
+    .form{
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        padding-left: 120px;
+        form{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width: 400px;
+            height: 450px;
+            padding: 5%;
+            background-color: white;
+            border-radius: 40px;
+        }
+    }
+}
+
+.pages{
+    p{
+        margin-top: 52px;
+        margin-left: 30px;
+        font-size: 30px;
+        a{
+            text-decoration: none;
+        }
     }
 }
 
