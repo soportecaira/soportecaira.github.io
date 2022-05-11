@@ -13,6 +13,8 @@
     <script src="cognito/amazon-cognito-auth.min.js"></script>
     <script src="cognito/amazon-cognito-identity.min.js"></script>
     <script src="cognito/config.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <noscript>We recomend you to enable scripts to use this webpage</noscript>
     <title>Caira Education</title>
 </head>
@@ -131,22 +133,22 @@
                 </div>
             </div>
             <div class="flex" id="cards">
-                <div class="info-card">
+                <div data-aos="fade-up"data-aos-offset="200" class="info-card">
                     <p><img src="assets/Recursos/Informate.png"></p>
                     <h3>Information</h3>
-                    <p>Discover all the avialiable options</p>
+                    <p>Discover all the avialiable opctions</p>
                 </div>
-                <div class="info-card">
+                <div data-aos="fade-up"data-aos-offset="300" class="info-card">
                     <p><img src="assets/Recursos/Interactua.png"></p>
                     <h3>Interact</h3>
                     <p>Know the experiences of former students</p>
                 </div>
-                <div class="info-card">
+                <div data-aos="fade-up"data-aos-offset="400" class="info-card">
                     <p><img src="assets/Recursos/Compara.png"></p>
                     <h3>Compare</h3>
                     <p>Assess the advantages and disadvantages</p>
                 </div>
-                <div class="info-card">
+                <div data-aos="fade-up"data-aos-offset="500" class="info-card">
                     <p><img src="assets/Recursos/Lanzate.png"></p>
                     <h3>Hop up!</h3>
                     <p>Collect all you need and go on an adventure!</p>
@@ -156,7 +158,7 @@
 
         <section id="fourth">
             <h1>All training to<br>your fingertips </h1>
-            <img id="map-ed" src="assets/Recursos/map.png">
+            <img data-aos="zoom-in" id="map-ed" src="assets/Recursos/map.png">
         </section>
 
         <section class="center-title" id="fifth">
@@ -269,5 +271,8 @@
 <script src="students.js"></script>
 <script src="cognito/register.js"></script>
 <script src="cognito/login.js"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 </html>
