@@ -1,5 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-@import url('http://fonts.cdnfonts.com/css/space-grotesk');
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
 
 $font1: 'Poppins';
 $font2: 'Space Grotesk', sans-serif;
@@ -15,6 +15,7 @@ $shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 body{
     border: 0;
+    bottom:0;
     padding: 0;
     margin: 0;
     background-color: $cairaWhite;
@@ -81,7 +82,7 @@ button{
     }
 }
 
-.info-card{
+.info-card, .info-card-2{
     height: 400px;
     width: 300px;
     display:flex; 
@@ -90,9 +91,11 @@ button{
     background-color: white;
     box-shadow: $shadow;
     margin: 40px;
+    padding: 10px;
     p{
         img{
             width: 200px;
+            height: 200px;
         }
         font-size: 20px; 
         margin-top: 0;
@@ -103,6 +106,13 @@ button{
         font-size: 30px;
         margin-top: 0;
         margin-bottom: 0;
+    }
+}
+.info-card-2{
+    height: 470px !important;
+    p{
+        margin-top: 20px; 
+        margin-bottom: 20px; 
     }
 }
 

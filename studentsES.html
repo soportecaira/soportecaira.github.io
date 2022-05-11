@@ -9,15 +9,13 @@
     <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="cognito/simple-notify.min.css" />
-    <script src="cognito/simple-notify.min.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
     <script src="cognito/amazon-cognito-auth.min.js"></script>
     <script src="cognito/amazon-cognito-identity.min.js"></script>
     <script src="cognito/config.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <noscript>We recomend you to enable scripts to use this webpage</noscript>
+    <noscript>Recomendamos que actives los scripts en esta página</noscript>
     <title>Caira Education</title>
 </head>
 <body>
@@ -59,23 +57,23 @@
         <div class="header">
             <div ><img src="assets/Logo-gradiente.png "class="logo"></div>
             <div class="flex pages">
-                <p><b>Students</b></p>
-                <p><a href="centros.html">Centers</a></p>
-                <p><b>EN</b> |</p>
-                <p><a href="studentsES.html">ES</a></p>
+                <p><b>Estudiante</b></p>
+                <p><a href="centros.html">Universidad</a></p>
+                <p><a href="index.html">EN</a> |</p>
+                <p><b>ES</b></p>
             </div>
         </div>
 
         <section class="flex" id="first">   
             <article>
-                <h2>Connect with</h2>
-                <h1>Universities</h1>
-                <p>We will help you to choose you carrera</p>
+                <h2>Conecta con</h2>
+                <h1>universidades</h1>
+                <p>Te ayudamos a decidir tu futuro</p>
             </article>
 
             <div class="form">
                 <form id="form-1" style="display: none;">
-                    <div class="flex"><h3>Get into Caira</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                    <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
                     <input id="loginEmail" type="email" placeholder="Email"><br>
                     <input id="loginPwd"  type="password" placeholder="Password"><br>
                     <input type="submit" value="Log in" onclick="loginButton()"><br>
@@ -83,24 +81,23 @@
                         <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
                             <img class="lg" src="assets/Recursos/google-brands.svg">Login with Google </a><br>  
                     </div>
-                    <a href="#" id="a-form1">New to Caira? Register now!</a>
+                    <a href="#" id="a-form1">¿Eres nuevo en Caira? ¡Regístrate ya!</a>
                 </form>
-                <form id="form-2" onsubmit="return registerButton()">
-                    <div class="flex"><h3>Join Caira</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                <form id="form-2" onsubmit="registerButton()">
+                    <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
                     <div class="flex">
-                        <input id="username" type="text" placeholder="Name">
-                        <input id="usersurname" type="text" placeholder="Surname">
+                        <input id="username" type="text" placeholder="Nombre">
+                        <input id="usersurname" type="text" placeholder="Apellidos">
                     </div>
                     <input id="useremail" type="email" placeholder="Email">
                     <div class="flex">
-                        <input id="userpwd" type="password" placeholder="Password">
-                        <input id="userpwdconf" type="password" placeholder="Confirm Password">
+                        <input id="userpwd" type="password" placeholder="Contraseña">
+                        <input id="userpwdconf" type="password" placeholder="Repite la contraseña">
                     </div>
-                    <p id="errorMessage"></p>
-                    <input id="signupbtn" type="submit" value="Sign up"><br>
+                    <input id="signupbtn" type="submit" value="Regístrate"><br>
                     <div class="google">
                         <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
-                            <img class="lg" src="assets/Recursos/google-brands.svg">Sign up with Google</a><br>  
+                            <img class="lg" src="assets/Recursos/google-brands.svg">Registrar con Google</a><br>  
                     </div>
                     <!-- <a href="#" id="a-form2">Already have an account? Log in</a>-->
                 </form>
@@ -111,27 +108,28 @@
             <div class="flex" id="sec2">
                 <div>
                     <p><img class="icon" src="assets/Recursos/flecha.png"></p>
-                    <h1>What is Caira?</h1>
-                    <p><b>Caira</b> is a social network where it is shown
-                        all the educational offer in the same portal.</p>
-                    <p>In such a way that if you are lost and do not know
-                        where to study what you are passionate about, in Caira
-                        you will be able to discover centers and opinions that
-                        will make it easier to make that decision.</p>
+                    <h1>¿Qué es Caira?</h1>
+                    <p><b>Caira</b> es una red social donde se muestra toda la oferta
+                        educativa en un mismo portal.</p>
+                    <p>De tal forma que si estás perdido y no sabes dónde estudiar lo
+                        que te apasiona, en Caira podrás descubrir centros y opiniones
+                        que te facilitarán tomar esa decisión.</p>
                 </div>
             </div>
         </section>
 
         <section class="center-title" id="third">
-            <h1>Caira helps you to find your path</h1>
-            <p class="text-pink">A community where to grow and advancein your professional life </p>
+            <h1>Caira te ayuda a trazar el camino,
+                tú lo recorres</h1>
+            <p class="text-pink">Una comunidad donde crecer y avanzar
+                en tu vida profesional.</p>
             <br>
             <div id="cards-resp">
                 <div class="flex">
                     <div class="arrow2 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
                     <div class="info-card back-white text-purple">
                         <p><img id="in-img" src="assets/Recursos/Informate.png"></p>
-                        <h3 id="in-title">Information</h3>
+                        <h3 id="in-title">Infórmate</h3>
                         <p id="in-sub">Discover all the avaliable options</p>
                     </div>
                     <div class="arrow2 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
@@ -140,35 +138,35 @@
             <div class="flex" id="cards">
                 <div data-aos="fade-up"data-aos-offset="200" class="info-card">
                     <p><img src="assets/Recursos/Informate.png"></p>
-                    <h3>Information</h3>
-                    <p>Discover all the avialiable opctions</p>
+                    <h3>Infórmate</h3>
+                    <p>Descubre todas las opciones que están en tu mano.</p>
                 </div>
                 <div data-aos="fade-up"data-aos-offset="300" class="info-card">
                     <p><img src="assets/Recursos/Interactua.png"></p>
-                    <h3>Interact</h3>
-                    <p>Know the experiences of former students</p>
+                    <h3>Interactúa</h3>
+                    <p>Conoce las experiencias de antiguos alumnos.</p>
                 </div>
                 <div data-aos="fade-up"data-aos-offset="400" class="info-card">
                     <p><img src="assets/Recursos/Compara.png"></p>
-                    <h3>Compare</h3>
-                    <p>Assess the advantages and disadvantages</p>
+                    <h3>Compara</h3>
+                    <p>Valora los pros y contras de tu opciones.</p>
                 </div>
                 <div data-aos="fade-up"data-aos-offset="500" class="info-card">
                     <p><img src="assets/Recursos/Lanzate.png"></p>
-                    <h3>Hop up!</h3>
-                    <p>Collect all you need and go on an adventure!</p>
+                    <h3>¡Lánzate!</h3>
+                    <p>Recoge todo lo necesario y ¡cómete el mundo!</p>
                 </div>
             </div>
         </section>
 
         <section id="fourth">
-            <h1>All training to<br>your fingertips </h1>
+            <h1>Toda la formación<br>al alcance de tu mano</h1>
             <img data-aos="zoom-in" id="map-ed" src="assets/Recursos/map.png">
         </section>
 
         <section class="center-title" id="fifth">
-            <h1>Looking for a profesional carrera?</h1>
-            <h3>You are not alone :)</h3>
+            <h1>¿Estás buscando una carrera profesional?</h1>
+            <h3>No estás solo :)</h3>
             <div class="flex">
                 <div class="carrusel flex">
                     <div class="arrow left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
@@ -184,15 +182,16 @@
         </section>
 
         <section id="metaverso">
-            <h1>More than a social Network</h1>
-            <h3>Learn about the experiences of former <br>students or facilities schools.</h3>
-            <button class="pink">Coming soon</button>
+            <h1>Más que una red social</h1>
+            <h3>Conoce las experiencias de antiguos alumnos o
+                las instalaciones de los centros educativos.</h3>
+            <button class="pink">Próximamente</button>
         </section>
 
         <section class="center-title" id="seventh">
-            <h1>Boosted by:</h1>
+            <h1>Partners</h1>
             <div class="lanz"><img src="assets/Recursos/lanzadera.png"></div>
-            <h3>Some of our partners:</h3>
+            <h3>Algunos de nuestros partners</h3>
             <div class="slider">
                 <div class="uni-logo">
                     <a class="link" href="https://www.facebook.com/Unavir-108107404246902/" target="_blank"><img class="partner" src="assets/Recursos/logos/unavir.jpg" alt=""/></a>
@@ -211,7 +210,7 @@
         </section>
         
         <section id="contact">
-            <h1>Contact with us</h1>
+            <h1>¿Deseas contactar con nosotros?</h1>
             <div class="flex-l">
                 <div class="bottom">
                     
@@ -223,19 +222,19 @@
                         <input type="hidden" name="_template" value="table"/>
                         <input type="hidden" name="_next" value={window.location.href}></input>
                         <textarea name="message"></textarea>
-                        <p><input type="checkbox">I agree with terms and conditions</p>
-                        <button type="submit" class="purple" id="send-contact">Send </button>
+                        <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
+                        <button type="submit" class="purple" id="send-contact">Enviar</button>
                     </form>
                 </div>
 
                 <div class="bottom">
-                    <p>We are at</p>
+                    <p>Estamos en:</p>
                     <img class="lanz" src="assets/Recursos/lanzadera.png">
                     <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
                     <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
                     <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
 
-                    <p>Follow us</p>
+                    <p>Síguenos</p>
                     <div class="flex social">
                         <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-azul.svg"></a>
                         <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-azul.svg"></a>
@@ -254,9 +253,9 @@
 
         <div class="ft-text">
             <div class="flex legal">
-                <p>Legal warning</p>
-                <p>Privacy policy</p>
-                <p>Cookies policy</p>
+                <p>Aviso legal</p>
+                <p>Política de privacidad</p>
+                <p>Política de cookies</p>
             </div>
 
             <div class="social">

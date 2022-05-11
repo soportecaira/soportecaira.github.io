@@ -21,41 +21,41 @@
         <div class="flex">
             <div><img src="assets/Logo-gradiente.png" class="logo"></div>
             <div class="flex pages">
-                <p><a href="index.html">Students</a></p>
-                <p><b>Centers</b></p>
-                <p><b>EN</b> |</p>
-                <p><a href="centrosES.html">ES</a></p>
+                <p><a href="index.html">Estudiante</a></p>
+                <p><b>Universidad</b></p>
+                <p><a href="index.html">EN</a> |</p>
+                <p><b>ES</b></p>
             </div>
         </div>
 
         <section class="flex" id="center-1">   
             <article>
-                <h1>We approach students to your institution</h1>
-                <p>Make it easy for the student to connect with you. Help him grow personally and professionally.</p>
+                <h1>Acercamos estudiantes a tu institución</h1>
+                <p>Ponle fácil al estudiante conectar contigo. Ayúdale a crecer personal y profesionalmente.</p>
             </article>
 
             <div class="form">
                 <form>
-                    <div class="flex"><h3>Contact with us</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
-                    <input type="text" placeholder="Name"><br>
-                    <input type="text" placeholder="Company"><br>
-                    <input type="email" placeholder="Email"><br>
-                    <div id="book"><input type="submit"  value="Book a call"></div><br>
+                    <div class="flex"><h3>Escríbenos</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                    <input type="text" placeholder="Tu nombre"><br>
+                    <input type="text" placeholder="Nombre del centro/Universidad"><br>
+                    <input type="email" placeholder="Email de contacto"><br>
+                    <div id="book"><input type="submit"  value="Contadme más"></div><br>
                 </form>
             </div>
         </section>
 
         <section class="center-title" id="third">
-            <h1>We grow together</h1>
-            <p class="text-pink">Your success is our success</p>
+            <h1>Crecemos juntos</h1>
+            <p class="text-pink">Tu éxito es nuestro éxito</p>
             <br>
             <div id="cards-resp">
                 <div class="flex">
                     <div class="arrow3 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
                     <div class="info-card back-white text-purple">
                         <p><img id="in-img" src="assets/Recursos/+student.png"></p>
-                        <h3 id="in-title">Get students</h3>
-                        <p id="in-sub">We make you a setup and we decided on a strategy to get students.</p>
+                        <h3 id="in-title">Consigue estudiantes</h3>
+                        <p id="in-sub">Te hacemos un setup y decidimos una estrategia para conseguir estudiantes.</p>
                     </div>
                     <div class="arrow3 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
                 </div>
@@ -63,32 +63,32 @@
             <div class="flex" id="cards">
                 <div class="info-card-2">
                     <p><img src="assets/Recursos/+student.svg"></p>
-                    <h3>Get students</h3>
-                    <p>We make you a setup and we decided on a strategy to get students</p>
+                    <h3>Consigue estudiantes</h3>
+                    <p>Te hacemos un setup y decidimos una estrategia para conseguir estudiantes.</p>
                 </div>
                 <div class="info-card-2">
                     <p><img src="assets/Recursos/conex.png"></p>
-                    <h3>A new channel</h3>
-                    <p>Create content to receive leads. Manage a new uptake channel</p>
+                    <h3>Un nuevo canal</h3>
+                    <p>Crea contenido para recibir leads. Gestiona un nuevo canal de captación.</p>
                 </div>
                 <div class="info-card-2">
                     <p><img src="assets/Recursos/Corona.png"></p>
-                    <h3>We share the success</h3>
-                    <p>Our work gives its fruits. we don't win if you don't win</p>
+                    <h3>Compartimos éxito</h3>
+                    <p>Nuestro trabajo da sus frutos. Nosotros no ganamos si tú no ganas.</p>
                 </div>
             </div>
         </section>
 
         <section id="metaverso">
-            <h1>More than a social Network</h1>
-            <h3>Learn about the experiences of former <br>students or facilities schools.</h3>
+            <h1>Más que una red social</h1>
+            <h3>Conoce las experiencias de antiguos <br>alumnos o las instalaciones de los centros educativos.</h3>
             <button class="pink">Coming soon</button>
         </section>
 
         <section class="center-title" id="seventh">
-            <h1>Boosted by:</h1>
+            <h1>Partners</h1>
             <div class="lanz"><img src="assets/Recursos/lanzadera.png"></div>
-            <h3>Some of our partners:</h3>
+            <h3>Algunos de neustros partners:</h3>
             <div class="slider">
                 <div class="uni-logo">
                     <a class="link" href="https://www.facebook.com/Unavir-108107404246902/" target="_blank"><img class="partner" src="assets/Recursos/logos/unavir.jpg" alt=""/></a>
@@ -106,31 +106,31 @@
         </section>
         
         <section id="contact">
-            <h1>Contact with us</h1>
+            <h1>¿Deseas contactar con nosotros?</h1>
             <div class="flex-l">
                 <div class="bottom">
                     
                     <form id="contact-form" action="https://formsubmit.co/caira@caira.io" method="POST">
-                        <input type="text" placeholder="Name"><br>
-                        <input type="text" name="email" placeholder="Email"><br>
+                        <input type="text" placeholder="Nombre y apellidos"><br>
+                        <input type="text" name="email" placeholder="Correo electrónico"><br>
                         <input type="hidden" name="_captcha" value="false"/>
                         <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/>
                         <input type="hidden" name="_template" value="table"/>
-                        <input type="hidden" name="_next" value={window.location.href}></input>
+                        <input type="hidden" name="_next" value={window.location.href}/>
                         <textarea name="message"></textarea>
-                        <p><input type="checkbox">I agree with terms and conditions</p>
-                        <button type="submit" class="purple" id="send-contact">Send </button>
+                        <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
+                        <button type="submit" class="purple" id="send-contact">Enviar</button>
                     </form>
                 </div>
 
                 <div class="bottom" id="b2">
-                    <p>We are at</p>
+                    <p>Estamos en:</p>
                     <img class="lanz" src="assets/Recursos/lanzadera.png">
                     <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
                     <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
                     <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
 
-                    <p>Follow us</p>
+                    <p>Síguenos</p>
                     <div class="flex social">
                         <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-azul.svg"></a>
                         <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-azul.svg"></a>
@@ -148,9 +148,9 @@
 
     <div class="ft-text">
         <div class="flex legal">
-            <p>Legal warning</p>
-            <p>Privacy policy</p>
-            <p>Cookies policy</p>
+            <p>Aviso legal</p>
+            <p>Política de privacidad</p>
+            <p>Política de cookies</p>
         </div>
 
         <div class="social">

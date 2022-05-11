@@ -4,15 +4,15 @@ let cairaInfoCentro = [
     {
         title: "Get students",
         subtitle: "We make you a setup and we decided on a strategy to get students",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/+student.png"
     },{
         title: "A new channel",
         subtitle: "Create content to receive leads. Manage a new uptake channel",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/conex.png"
     },{
         title: "We share the success",
         subtitle: "Our work gives its fruits. we don't win if you don't win",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/Corona.png"
     }
 ];
 
