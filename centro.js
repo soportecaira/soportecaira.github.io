@@ -4,7 +4,7 @@ let cairaInfoCentro = [
     {
         title: "Get students",
         subtitle: "We make you a setup and we decided on a strategy to get students",
-        image: "assets/Recursos/+student.svg"
+        image: "assets/Recursos/+student.png"
     },{
         title: "A new channel",
         subtitle: "Create content to receive leads. Manage a new uptake channel",
