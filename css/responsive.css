@@ -8,6 +8,9 @@
 }
 
 @media (max-width: 1180px) {
+    .header{
+        justify-content: center;
+    }
     #book{
         display: flex;
         justify-content: center;
