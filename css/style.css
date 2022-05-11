@@ -7,6 +7,7 @@
 
 body {
   border: 0;
+  bottom: 0;
   padding: 0;
   margin: 0;
   background-color: #f2f2f2;
@@ -88,7 +89,7 @@ button a {
   text-align: center;
 }
 
-.info-card {
+.info-card, .info-card-2 {
   height: 400px;
   width: 300px;
   display: -webkit-box;
@@ -103,23 +104,34 @@ button a {
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 40px;
+  padding: 10px;
 }
 
-.info-card p {
+.info-card p, .info-card-2 p {
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 0;
   padding: 10px;
 }
 
-.info-card p img {
+.info-card p img, .info-card-2 p img {
   width: 200px;
+  height: 200px;
 }
 
-.info-card h3 {
+.info-card h3, .info-card-2 h3 {
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.info-card-2 {
+  height: 470px !important;
+}
+
+.info-card-2 p {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 section {

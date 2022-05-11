@@ -22,19 +22,19 @@ let cairaInfo = [
     {
         title: "Information",
         subtitle: "Discover all the avialiable options",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/Informate.png"
     },{
         title: "Interact",
         subtitle: "Know the experiences of former students",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/Interactua.png"
     },{
         title: "Compare",
         subtitle: "Assess the advantages and disadvantages",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/Compara.png"
     },{
         title: "Hop up!",
         subtitle: "Collect all you need and go on an adventure!",
-        image: "assets/Iso gradiente.png"
+        image: "assets/Recursos/Lanzate.png"
     }
 ];
 
@@ -45,7 +45,7 @@ const cambiarInfo = () =>{
 
     let n_title = document.createTextNode(cairaInfo[p2].title);
     let n_sub = document.createTextNode(cairaInfo[p2].subtitle);
-    let n_img = cairaInfo[p].image;
+    let n_img = cairaInfo[p2].image;
 
     title.removeChild(title.firstChild);
     sub.removeChild(sub.firstChild);

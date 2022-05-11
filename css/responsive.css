@@ -8,6 +8,10 @@
 }
 
 @media (max-width: 1180px) {
+    #book{
+        display: flex;
+        justify-content: center;
+    }
     #center-1{
         background-size: 0;
         flex-direction: column;
@@ -84,9 +88,6 @@
     .logo{
         margin: auto;
         width: 150px;
-    }
-    .header{
-
     }
     article h1, article h2{
         width: 100%;
@@ -201,7 +202,7 @@
 }  
 
 @media (max-width: 500px) {
-    .arrow{
+    .arrow,.arrow2{
         width: 30px;
     }
     .ft-logo img{
@@ -237,11 +238,13 @@
 @media (max-width: 420px) {
     .pages p{
         margin-top: 27px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .lanz img, .lanz{
         width: 200px;
     }
-    .arrow{
+    .arrow, .arrow2{
         width: 20px;
         margin-right: 3px;
         margin-left: 3px;
