@@ -9,6 +9,8 @@
     <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="cognito/simple-notify.min.css" />
+    <script src="cognito/simple-notify.min.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
     <script src="cognito/amazon-cognito-auth.min.js"></script>
     <script src="cognito/amazon-cognito-identity.min.js"></script>
@@ -79,7 +81,7 @@
                     </div>
                     <a href="#" id="a-form1">New to Caira? Register now!</a>
                 </form>
-                <form id="form-2" onsubmit="registerButton()">
+                <form id="form-2" onsubmit="return registerButton()">
                     <div class="flex"><h3>Join Caira</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
                     <div class="flex">
                         <input id="username" type="text" placeholder="Name">
@@ -90,6 +92,7 @@
                         <input id="userpwd" type="password" placeholder="Password">
                         <input id="userpwdconf" type="password" placeholder="Confirm Password">
                     </div>
+                    <p id="errorMessage"></p>
                     <input id="signupbtn" type="submit" value="Sign up"><br>
                     <div class="google">
                         <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
