@@ -1,4 +1,4 @@
-let p3 = 0;
+let count = 0;
 
 let cairaInfoCentro = [
     {
@@ -21,9 +21,9 @@ const cambiarInfoCentro = () =>{
     let sub = document.getElementById("in-sub");
     let img = document.getElementById("in-img");
 
-    let n_title = document.createTextNode(cairaInfoCentro[p3].title);
-    let n_sub = document.createTextNode(cairaInfoCentro[p3].subtitle);
-    let n_img = cairaInfoCentro[p3].image;
+    let n_title = document.createTextNode(cairaInfoCentro[count].title);
+    let n_sub = document.createTextNode(cairaInfoCentro[count].subtitle);
+    let n_img = cairaInfoCentro[count].image;
 
     title.removeChild(title.firstChild);
     sub.removeChild(sub.firstChild);
@@ -36,16 +36,16 @@ window.onload=function(){
     let arrows3 = document.getElementsByClassName("arrow3");
   
     arrows3[0].addEventListener("click", function(){
-        p3--;
-        if(p3<0){
-            p3=cairaInfoCentro.length-1;
+        count--;
+        if(count<0){
+            count=cairaInfoCentro.length-1;
         }
         cambiarInfoCentro();
     });
     arrows3[1].addEventListener("click", function(){
-        p3++;
-        if(p3==cairaInfoCentro.length){
-            p3=0;
+        count++;
+        if(count==cairaInfoCentro.length){
+            count=0;
         }
         console.log(cairaInfoCentro.length)
         cambiarInfoCentro();

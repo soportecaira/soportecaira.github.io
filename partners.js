@@ -1,4 +1,4 @@
-pt=0;
+count=0;
 let partners = [ 
     ["ada.jpg","bcas.png","isam.jpg","trepcamp.png"],
     ["4geeks.png","assembler.jpg","hult.png","ironhack.jpg"],
@@ -18,16 +18,16 @@ let enlances = [
         let part = document.getElementsByClassName("partner");
         let links = document.getElementsByClassName("link");
         for(let i=0; i<part.length; i++){
-            part[i].setAttribute("src", "assets/Recursos/logos/"+partners[pt][i]);
+            part[i].setAttribute("src", "assets/Recursos/logos/"+partners[count][i]);
             part[i].style.animation = 'none';
             part[i].offsetHeight; 
             part[i].style.animation = null;
-            links[i].setAttribute("href", enlances[pt][i]);
+            links[i].setAttribute("href", enlances[count][i]);
         }
 
-        pt++;
-        if(pt==partners.length){
-            pt=0;
+        count++;
+        if(count==partners.length){
+            count=0;
         }
     }, 5000);
 

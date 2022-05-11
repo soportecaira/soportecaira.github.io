@@ -1,6 +1,5 @@
-let p = 0;
-let p2 = 0;
-let pt = 0;
+let count = 0;
+let count2 = 0;
 
 let mensajes = [
     {
@@ -43,9 +42,9 @@ const cambiarInfo = () =>{
     let sub = document.getElementById("in-sub");
     let img = document.getElementById("in-img");
 
-    let n_title = document.createTextNode(cairaInfo[p2].title);
-    let n_sub = document.createTextNode(cairaInfo[p2].subtitle);
-    let n_img = cairaInfo[p2].image;
+    let n_title = document.createTextNode(cairaInfo[count2].title);
+    let n_sub = document.createTextNode(cairaInfo[count2].subtitle);
+    let n_img = cairaInfo[count2].image;
 
     title.removeChild(title.firstChild);
     sub.removeChild(sub.firstChild);
@@ -60,9 +59,9 @@ const cambiarMensaje = () =>{
     let star = document.getElementById("op-star");
     let img = document.getElementById("op-img");
 
-    let n_txt = document.createTextNode(mensajes[p].message);
-    let n_star = document.createTextNode(mensajes[p].stars);
-    let n_img = mensajes[p].image;
+    let n_txt = document.createTextNode(mensajes[count].message);
+    let n_star = document.createTextNode(mensajes[count].stars);
+    let n_img = mensajes[count].image;
 
     for(let i=0; i<card.length; i++){
 
@@ -82,6 +81,8 @@ const cambiarMensaje = () =>{
 
 window.onload = function(){
     /*
+    //MENU HAMBURGUESA:
+
     let logo = document.querySelector('.container');
     let menu = document.querySelector('.menu');
     logo.addEventListener('click',function(){
@@ -89,15 +90,14 @@ window.onload = function(){
         menu.classList.toggle('showmenu');  
     });
 
+    //ENLACE LOGIN - REGISTRO :
+
     let goToRegister = document.getElementById("a-form1");
     let goToLogin = document.getElementById("a-form2");
     let login = document.getElementById("form-1");
     let register = document.getElementById("form-2");
     let form = document.getElementsByClassName("form")[0];
 
-   
-
-   
     goToRegister.addEventListener("click",function(){
         login.style.display = "none";
         register.style.display = "block";
@@ -110,36 +110,38 @@ window.onload = function(){
     });
     */
 
+    //CARRUSELES:
+
     let arrows = document.getElementsByClassName("arrow");
     let arrows2 = document.getElementsByClassName("arrow2");
 
     arrows[0].addEventListener("click", function(){
-        p--;
-        if(p<0){
-            p=mensajes.length-1;
+        count--;
+        if(count<0){
+            count=mensajes.length-1;
         }
         cambiarMensaje();
     });
     arrows[1].addEventListener("click", function(){
-        p++;
-        if(p==mensajes.length){
-            p=0;
+        count++;
+        if(count==mensajes.length){
+            count=0;
         }
         
         cambiarMensaje();
     });
 
     arrows2[0].addEventListener("click", function(){
-        p2--;
-        if(p2<0){
-            p2=cairaInfo.length-1;
+        count2--;
+        if(count2<0){
+            count2=cairaInfo.length-1;
         }
         cambiarInfo();
     });
     arrows2[1].addEventListener("click", function(){
-        p2++;
-        if(p2==cairaInfo.length){
-            p2=0;
+        count2++;
+        if(count2==cairaInfo.length){
+            count2=0;
         }
         console.log(cairaInfo.length)
         cambiarInfo();

@@ -1,6 +1,11 @@
-#cards-resp{
-    display: none;
-}
+/* 
+    GUIA RESPONSIVE POR ORDEN DE PRIORIDAD
+    1. Primero media querys min-width, después media querys max-width
+    2. Media querys ordenados de mayor a menor resolución
+    3. En cada media query se ordena primero etiquetas, lueglo clases, último IDs
+    4. Dentro lo posible mantener un orden similar a la web (elementos que afecten al header arriba, al footer abajo, etc.)
+*/
+
 @media (min-width: 1920px) {
     #second{
         background-position: left 100% top -380px;
@@ -8,9 +13,35 @@
 }
 
 @media (max-width: 1180px) {
+    article h1, article h2{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .logo{
+        margin: auto;
+        width: 150px;
+    }
     .header{
         justify-content: center;
     }
+    .pages p{
+        margin-top: 34px;
+        margin-left: 20px
+    }
+    .ft-logo{
+        margin-top: 32px;
+    }
+    .ft-text{
+        margin-top: 30px !important;
+        flex-direction: column !important;
+    }
+    .form input[type="submit"], .form .google{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
     #book{
         display: flex;
         justify-content: center;
@@ -37,11 +68,6 @@
     #metaverso{
         height: auto;
     }
-    .pages p{
-        margin-top: 34px;
-        margin-left: 20px
-    }
-        
     #google{
         margin-left: auto;
         margin-right: auto;
@@ -80,42 +106,19 @@
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     #sec2{
         flex-direction: column !important; 
     }
-    .logo{
-        margin: auto;
-        width: 150px;
-    }
-    article h1, article h2{
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .ft-logo{
-        margin-top: 32px;
-    }
-    .ft-text{
-        margin-top: 30px !important;
-        flex-direction: column !important;
-    }
-    .form input[type="submit"], .form .google{
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
+    
 }
 
 @media (max-width: 850px) {
+    footer{
+        grid-template-columns: 40% 60%;
+    }
+
     .logo{
         width: 100px;
-    }
-    #center-1 article{
-        height: 350px;
     }
     .pages p{
         margin-top: 15px;
@@ -124,10 +127,11 @@
         width: 250px!important;
         margin-top: 20px;
     }
- 
-    #second{
-        padding-left: 5%;
-        padding-right: 5%;
+    .social, .social div{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px !important;
+        margin-left: 15px
     }
     .flex-l{
         flex-direction: column;
@@ -135,18 +139,18 @@
     .bottom{
         width: 100%;
     }
+
     #contact{
         flex-direction: column;
     }
-    footer{
-        grid-template-columns: 40% 60%;
+    #second{
+        padding-left: 5%;
+        padding-right: 5%;
     }
-    .social, .social div{
-        display: flex;
-        flex-direction: row;
-        margin-top: 10px !important;
-        margin-left: 15px
+    #center-1 article{
+        height: 350px;
     }
+    
 }
 
 @media (max-width: 700px) {
@@ -205,7 +209,14 @@
 }  
 
 @media (max-width: 500px) {
-    .arrow,.arrow2{
+    #first article{
+        padding-bottom: 50px !important;
+    }
+    #center-1 article{
+        height: 500px;
+    }
+
+    .arrow,.arrow2,.arrow3{
         width: 30px;
     }
     .ft-logo img{
@@ -229,51 +240,10 @@
     .ft-logo{
         width: 150px;
     }
-    #first article{
-        padding-bottom: 50px !important;
-    }
-    #center-1 article{
-        height: 500px;
-    }
    
 }
 
 @media (max-width: 420px) {
-    .pages p{
-        margin-top: 27px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .lanz img, .lanz{
-        width: 200px;
-    }
-    .arrow, .arrow2{
-        width: 20px;
-        margin-right: 3px;
-        margin-left: 3px;
-    }
-    footer{
-        flex-direction: column;
-        height: 400px;
-    }
-    .ft-logo img{
-        width: 150px!important;
-    }
-    .ft-logo{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #first .form{
-        height: 200px;
-    }
-    #first article{ 
-        height: 200px;
-        padding-top: 10px;
-    }
-    #center-1 article{ 
-        height: 6%;
-        margin-bottom: 20px;
-    }
     article h1{
         font-size: 40px !important;
     }
@@ -289,13 +259,50 @@
     p{
         font-size: 14px !important;
     }
+    footer{
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .pages p{
+        margin-top: 27px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .lanz img, .lanz{
+        width: 200px;
+    }
+    .arrow, .arrow2, .arrow3{
+        width: 20px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+    .uni-logo{        
+        width: 51px;
+        height: 51px;
+    }
     .uni-logo img{
         width: 50px;
         height: 50px;
 
     }
-    .uni-logo{        
-        width: 51px;
-        height: 51px;
+    .ft-logo img{
+        width: 150px!important;
+    }
+    .ft-logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #first .form{
+        height: 200px;
+    }
+    #first article{ 
+        height: 200px;
+        padding-top: 10px;
+    }
+    #center-1 article{ 
+        height: 6%;
+        margin-bottom: 20px;
     }
 }

@@ -7,20 +7,21 @@ $cairaWhite: #f2f2f2;
 $cairaPurple: rgb(37, 40, 89);
 $cairaPink: rgb(251, 149, 243);
 $gradient: linear-gradient(to left, rgb(37, 40, 89), rgb(251, 149, 243));
-$logoMinSize: 120px;
 $shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 *{
     box-sizing: border-box;
 }
 body{
-    border: 0;
-    bottom:0;
+    top: 0;
+    bottom: 0;
     padding: 0;
     margin: 0;
     background-color: $cairaWhite;
     color: $cairaPurple;
 }    
+
+// Elementos texto
 
 h1,h2,h3{
     font-family: $font2;
@@ -38,6 +39,11 @@ h2{
 }
 h3{
     font-size: 34px;
+}
+.center-title{
+    h1,h2,h3,p{
+        text-align: center;
+    }
 }
 button{
     background-color: transparent;
@@ -66,162 +72,44 @@ button{
         color: $cairaPurple;
     }
 }
+
+//Contenedores
+
+section{
+    padding: 5%;
+}
+
 .flex{
     display: flex;
     justify-content: center;
 }
+.flex-l{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
 .logo{
     width: 200px;
     margin-left: 30px;
     margin-right: 30px;
     height: auto;  
 }
-.center-title{
-    h1,h2,h3,p{
-        text-align: center;
-    }
-}
 
-.info-card, .info-card-2{
-    height: 400px;
-    width: 300px;
-    display:flex; 
-    border-radius: 40px;
-    flex-direction:column;
-    background-color: white;
-    box-shadow: $shadow;
-    margin: 40px;
-    padding: 10px;
+.pages{
     p{
-        img{
-            width: 200px;
-            height: 200px;
-        }
-        font-size: 20px; 
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 10px;
-    }
-    h3{
+        margin-top: 52px;
+        margin-right: 20px;
         font-size: 30px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-.info-card-2{
-    height: 470px !important;
-    p{
-        margin-top: 20px; 
-        margin-bottom: 20px; 
-    }
-}
-
-section{
-    padding: 5%;
-    &.no-padding{
-        padding: 0;
-    }
-}
-.carrusel{
-    width: 650px;
-    }
-.arrow2, .arrow, .arrow3{
-   height: 40px;
-   width: 40px;
-   text-align: center;
-   margin-top: 210px;
-}
-.arrow{
-    margin-top: 130px;
- }
-
-.card-opinion{
-    width: 500px;
-    height: 300px;
-    margin: auto;
-    display:flex; 
-    flex-direction:column;
-    background-color: white;
-    box-shadow: $shadow;
-    border-radius: 40px;
-    p{
-        margin: auto;
-        padding-left: 60px;
-        padding-right: 60px;
-        text-align: center;
-        img{
-            width: 100px;
-            border-radius: 100%;
+        a{
+            text-decoration: none;
         }
     }
-    .stars{
-        font-size: 30px;
-        margin-bottom: 30px;
-    }  
 }
 
-footer{
-    margin: 0;
-    bottom: 0;
-    color: $cairaWhite;
-    background-image: $gradient;
-    height: 220px;
+.header{
     display: flex;
-    .ft-logo{
-        margin-top: 0;
-        padding: 0;
-        img{
-            width: 300px;
-        }
-    }
-    .ft-text{
-        margin-top: 80px;
-        display: flex;
-        flex-direction: row;
-        div{
-            margin-left: 50px;
-        }
-        .legal{
-            p{
-                margin-right: 20px;
-            }
-        }
-    }
-}
-
-#first{
-    height: 700px;
-    margin-top: -191px;
-    justify-content: left !important;
-    article{
-        width: 65%;
-        margin-top: 100px;
-        h1,h2,p{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: $cairaWhite;
-        }
-        h1{
-            font-size: 100px;
-        }
-        h2{
-            font-size: 75px;
-        }
-        p{
-            font-size: 30px;
-        }
-    }
-}
-
-#second{
-    padding-left: 25%;
-    padding-right: 25%;
-}
-
-#map-ed{
-    margin: auto;
-    padding: auto;
-    width: 100%;
+    margin-left: 2%;
 }
 
 .form{
@@ -308,101 +196,141 @@ footer{
     }
 }
 
-#contact-form{
-    input{
-        &[type="text"],&[type="email"]{
-            width: 90%;
-            border-radius: 30px;
+#first{
+    height: 700px;
+    margin-top: -191px;
+    justify-content: left !important;
+    article{
+        width: 65%;
+        margin-top: 100px;
+        h1,h2,p{
+            margin-top: 10px;
             margin-bottom: 10px;
-            border: none;
-            height: 40px;
-            padding: 20px;
+            color: $cairaWhite;
+        }
+        h1{
+            font-size: 100px;
+        }
+        h2{
+            font-size: 75px;
+        }
+        p{
+            font-size: 30px;
         }
     }
-    textarea{
-        height: 200px;
-        width: 90%;
-        border-radius: 30px;
-        margin-bottom: 10px;
-        border: none;
-        padding: 20px;
-        font-family: $font1;
-    }
-}
-.bottom{
-    width: 45%;
-    margin-bottom: 20px;
-}
-#b2{
-    margin-top: -20px;
-}
-.flex-l{
-    display: flex;
-    justify-content: left;
-    flex-direction: row;
-}
-.loc{
-    margin-top: 30px;
-    display: flex;
-    justify-content: left;
-    p{
-        margin-left: 10px
-    }
-    img{
-        width: 40px;
-        height: 40px;
-        margin-top: 10px;
-    }
-}
-
-.social{
-    justify-content: left;
-    margin-top: 13px;
-    img{
-        width: 30px;
-        margin-right: 10px;
-    }
-}
-
-.icon{
-    width: 50px;
-}
-
-#metaverso{
-    background-image: url("../assets/Recursos/Caira_espacio.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    color: $cairaWhite;
-    height: 700px;
-}
-#center-1{
-    background-image: url("../assets/Recursos/fondo2.png");
-    background-position: left 90% top 10px;
-    background-size: 40%;
-    background-repeat: no-repeat;
-}
-#first{
-    background-image: url("../assets/Recursos/video.gif");
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-#second,#third,#fifth{
-    background-size: 30%;
-    background-repeat: no-repeat;
 }
 
 #second{
-    background-image: url("../assets/Recursos/fondo3.png");
-    background-position: left 100% top -280px;
+    padding-left: 25%;
+    padding-right: 25%;
 }
-#third{
-    background-image: url("../assets/Recursos/fondo1.png");
-    background-position: left 5% top 250px;
-    background-size: 40%;
+
+.info-card, .info-card-2{
+    height: 400px;
+    width: 300px;
+    display:flex; 
+    border-radius: 40px;
+    flex-direction:column;
+    background-color: white;
+    box-shadow: $shadow;
+    margin: 40px;
+    padding: 10px;
+    p{
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        font-size: 20px; 
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 10px;
+    }
+    h3{
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
-#fifth{
-    background-image: url("../assets/Recursos/fondo2.png");
-    background-position: left 90% top 300px;
+.info-card-2{
+    height: 470px !important;
+    p{
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+    }
+}
+
+.carrusel{
+    width: 650px;
+}
+
+.arrow, .arrow2, .arrow3{ 
+   height: 40px;
+   width: 40px;
+   text-align: center;
+   margin-top: 210px;
+}
+.arrow{
+    margin-top: 130px;
+ }
+
+.card-opinion{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    display: flex; 
+    flex-direction:column;
+    background-color: white;
+    box-shadow: $shadow;
+    border-radius: 40px;
+    p{
+        margin: auto;
+        padding-left: 60px;
+        padding-right: 60px;
+        text-align: center;
+        img{
+            width: 100px;
+            border-radius: 100%;
+        }
+    }
+    .stars{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }  
+}
+
+footer{
+    margin: 0;
+    bottom: 0;
+    color: $cairaWhite;
+    background-image: $gradient;
+    height: 220px;
+    display: flex;
+    .ft-logo{
+        margin-top: 0;
+        padding: 0;
+        img{
+            width: 300px;
+        }
+    }
+    .ft-text{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        div{
+            margin-left: 50px;
+        }
+        .legal{
+            p{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+#map-ed{
+    margin: auto;
+    padding: auto;
+    width: 100%;
 }
 
 .slider {
@@ -437,6 +365,105 @@ footer{
     }
 }
 
+#contact-form{
+    input{
+        &[type="text"],&[type="email"]{
+            width: 90%;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            border: none;
+            height: 40px;
+            padding: 20px;
+        }
+    }
+    textarea{
+        height: 200px;
+        width: 90%;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        border: none;
+        padding: 20px;
+        font-family: $font1;
+    }
+}
+.bottom{
+    width: 45%;
+    margin-bottom: 20px;
+}
+#b2{
+    margin-top: -20px;
+}
+.loc{
+    margin-top: 30px;
+    display: flex;
+    justify-content: left;
+    p{
+        margin-left: 10px
+    }
+    img{
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+    }
+}
+
+.social{
+    justify-content: left;
+    margin-top: 13px;
+    img{
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+
+.icon{
+    width: 50px;
+}
+
+#cards-resp{
+    display: none;
+}
+
+//Backgrounds
+
+#second,#third,#fifth,#first,#center-1,#metaverso{
+    background-repeat: no-repeat;
+}
+
+#metaverso{
+    background-image: url("../assets/Recursos/Caira_espacio.jpg");
+    background-size: cover;
+    color: $cairaWhite;
+    height: 700px;
+}
+#center-1{
+    background-image: url("../assets/Recursos/fondo2.png");
+    background-position: left 90% top 10px;
+    background-size: 40%;
+}
+#first{
+    background-image: url("../assets/Recursos/video.gif");
+    background-size: 100%;
+}
+
+#second{
+    background-image: url("../assets/Recursos/fondo3.png");
+    background-size: 30%;
+    background-position: left 100% top -280px;
+}
+#third{
+    background-image: url("../assets/Recursos/fondo1.png");
+    background-position: left 5% top 250px;
+    background-size: 40%;
+}
+#fifth{
+    background-image: url("../assets/Recursos/fondo2.png");
+    background-size: 30%;
+    background-position: left 90% top 300px;
+}
+
+//Elementos únicos de la pagina de centros
+
 #center-1{
     display: flex;
     article{
@@ -449,7 +476,7 @@ footer{
         justify-content: center;
         padding-left: 120px;
         form{
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: $shadow;
             width: 400px;
             height: 450px;
             padding: 5%;
@@ -459,21 +486,6 @@ footer{
     }
 }
 
-.pages{
-    p{
-        margin-top: 52px;
-        margin-right: 20px;
-        font-size: 30px;
-        a{
-            text-decoration: none;
-        }
-    }
-}
-
-.header{
-    display: flex;
-    margin-left: 2%;
-}
 
 
 

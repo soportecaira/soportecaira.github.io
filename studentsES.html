@@ -1,282 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/Iso-gradiente.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/styleNav.css"> -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
-    <script src="cognito/amazon-cognito-auth.min.js"></script>
-    <script src="cognito/amazon-cognito-identity.min.js"></script>
-    <script src="cognito/config.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <noscript>Recomendamos que actives los scripts en esta página</noscript>
-    <title>Caira Education</title>
-</head>
-<body>
-    <!-- Cabecera -->
-    <header>
-        
-        <!-- <a href=""><img src="assets/account.png" alt="" class="account-logo"></a> 
-        <div class="container">
-            <div class="menulogo"><img src="assets/hamburger.png" class="hamburger-logo" alt=""></div>
-        </div>
-        <ul class="desktop">
-        <li><a href="#" class="navbar-font bold">Estudiante</a></li>
-        <li class="desktop-grow"><a href="#" class="navbar-font bold">Universidad</a></li>
-         <li >
-            <a href="#" class="navbar-font">ES</a>
-            <a href="#" class="en-button">| EN</a>
-        </li>
-        <li><a href="#" class="navbar-font">Iniciar Sesión</a></li>
-        <li><a href="#" class="navbar-font button">Regístrate</a></li> 
-        </ul>-->
-    </header>
-    <!-- Menu para moviles 
-    <ul class="mobile menu">
-    <li><a href="#">Estudiante</a></li>
-    <li><a href="#">Universidades</a></li>
-    <li><a href="#">Iniciar Sesión</a></li>
-    <li><a href="#" class="button">Regístrate</a></li>
-    <span class="language-select">
-        <p>ES</p>
-        <p class="en-button">| EN</p>
-    </span>
-    <span class="social-media">
-        <a href=""><img src="assets/instagram.png" alt="" class="social-logos"></a>
-        <a href=""><img src="assets/facebook.png" alt="" class="social-logos"></a>
-        <a href=""><img src="assets/linkedin.png" alt="" class="linkedin social-logos"></a>
-    </span>
-    </ul>-->
-    <main>
-        <div class="header">
-            <div ><img src="assets/Logo-gradiente.png "class="logo"></div>
-            <div class="flex pages">
-                <p><b>Estudiante</b></p>
-                <p><a href="centros.html">Universidad</a></p>
-                <p><a href="index.html">EN</a> |</p>
-                <p><b>ES</b></p>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="assets/Iso-gradiente.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styleNav.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <link rel="stylesheet" href="cognito/simple-notify.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+        <script src="cognito/simple-notify.min.js"></script>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1126.0.min.js"></script>
+        <script src="cognito/amazon-cognito-auth.min.js"></script>
+        <script src="cognito/amazon-cognito-identity.min.js"></script>
+        <script src="cognito/config.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <noscript>Por favor, habilita JavaScript para utilizar está web</noscript>
+        <title>Caira Education</title>
+    </head>
+    
+    <body>
+        <!-- POSIBLE MENU HAMBURGUESA: -->
+
+        <!--
+        <header>
+            <a href=""><img src="assets/account.png" alt="" class="account-logo"></a> 
+            <div class="container">
+                <div class="menulogo"><img src="assets/hamburger.png" class="hamburger-logo" alt=""></div>
             </div>
-        </div>
+        </header>
+        !-->
 
-        <section class="flex" id="first">   
-            <article>
-                <h2>Conecta con</h2>
-                <h1>universidades</h1>
-                <p>Te ayudamos a decidir tu futuro</p>
-            </article>
+        <!-- 
+        <ul class="mobile menu">
+            <li><a href="#">Estudiante</a></li>
+            <li><a href="#">Universidades</a></li>
+            <li><a href="#">Iniciar Sesión</a></li>
+            <li><a href="#" class="button">Regístrate</a></li>
+            <span class="language-select">
+                <p>ES</p>
+                <p class="en-button">| EN</p>
+            </span>
+            <span class="social-media">
+                <a href=""><img src="assets/instagram.png" alt="" class="social-logos"></a>
+                <a href=""><img src="assets/facebook.png" alt="" class="social-logos"></a>
+                <a href=""><img src="assets/linkedin.png" alt="" class="linkedin social-logos"></a>
+            </span>
+        </ul>
+    -->
 
-            <div class="form">
-                <form id="form-1" style="display: none;">
-                    <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
-                    <input id="loginEmail" type="email" placeholder="Email"><br>
-                    <input id="loginPwd"  type="password" placeholder="Password"><br>
-                    <input type="submit" value="Log in" onclick="loginButton()"><br>
-                    <div class="google">
-                        <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
-                            <img class="lg" src="assets/Recursos/google-brands.svg">Login with Google </a><br>  
-                    </div>
-                    <a href="#" id="a-form1">¿Eres nuevo en Caira? ¡Regístrate ya!</a>
-                </form>
-                <form id="form-2" onsubmit="registerButton()">
-                    <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
-                    <div class="flex">
-                        <input id="username" type="text" placeholder="Nombre">
-                        <input id="usersurname" type="text" placeholder="Apellidos">
-                    </div>
-                    <input id="useremail" type="email" placeholder="Email">
-                    <div class="flex">
-                        <input id="userpwd" type="password" placeholder="Contraseña">
-                        <input id="userpwdconf" type="password" placeholder="Repite la contraseña">
-                    </div>
-                    <input id="signupbtn" type="submit" value="Regístrate"><br>
-                    <div class="google">
-                        <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
-                            <img class="lg" src="assets/Recursos/google-brands.svg">Registrar con Google</a><br>  
-                    </div>
-                    <!-- <a href="#" id="a-form2">Already have an account? Log in</a>-->
-                </form>
-            </div>
-        </section>
-
-        <section id="second">
-            <div class="flex" id="sec2">
-                <div>
-                    <p><img class="icon" src="assets/Recursos/flecha.png"></p>
-                    <h1>¿Qué es Caira?</h1>
-                    <p><b>Caira</b> es una red social donde se muestra toda la oferta
-                        educativa en un mismo portal.</p>
-                    <p>De tal forma que si estás perdido y no sabes dónde estudiar lo
-                        que te apasiona, en Caira podrás descubrir centros y opiniones
-                        que te facilitarán tomar esa decisión.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="center-title" id="third">
-            <h1>Caira te ayuda a trazar el camino,
-                tú lo recorres</h1>
-            <p class="text-pink">Una comunidad donde crecer y avanzar
-                en tu vida profesional.</p>
-            <br>
-            <div id="cards-resp">
-                <div class="flex">
-                    <div class="arrow2 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
-                    <div class="info-card back-white text-purple">
-                        <p><img id="in-img" src="assets/Recursos/Informate.png"></p>
-                        <h3 id="in-title">Infórmate</h3>
-                        <p id="in-sub">Discover all the avaliable options</p>
-                    </div>
-                    <div class="arrow2 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
-                </div>
-            </div>
-            <div class="flex" id="cards">
-                <div data-aos="fade-up"data-aos-offset="200" class="info-card">
-                    <p><img src="assets/Recursos/Informate.png"></p>
-                    <h3>Infórmate</h3>
-                    <p>Descubre todas las opciones que están en tu mano.</p>
-                </div>
-                <div data-aos="fade-up"data-aos-offset="300" class="info-card">
-                    <p><img src="assets/Recursos/Interactua.png"></p>
-                    <h3>Interactúa</h3>
-                    <p>Conoce las experiencias de antiguos alumnos.</p>
-                </div>
-                <div data-aos="fade-up"data-aos-offset="400" class="info-card">
-                    <p><img src="assets/Recursos/Compara.png"></p>
-                    <h3>Compara</h3>
-                    <p>Valora los pros y contras de tu opciones.</p>
-                </div>
-                <div data-aos="fade-up"data-aos-offset="500" class="info-card">
-                    <p><img src="assets/Recursos/Lanzate.png"></p>
-                    <h3>¡Lánzate!</h3>
-                    <p>Recoge todo lo necesario y ¡cómete el mundo!</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="fourth">
-            <h1>Toda la formación<br>al alcance de tu mano</h1>
-            <img data-aos="zoom-in" id="map-ed" src="assets/Recursos/map.png">
-        </section>
-
-        <section class="center-title" id="fifth">
-            <h1>¿Estás buscando una carrera profesional?</h1>
-            <h3>No estás solo :)</h3>
-            <div class="flex">
-                <div class="carrusel flex">
-                    <div class="arrow left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
-                    <div class="back-white card-opinion">
-                        <p><img class="op-card" id="op-img" src="assets/Iso gradiente.png"></p>
-                        <p class="op-card" id="op-txt">Aquí el estudiante escribirá lo fantastica y maravillosa que es Caira y el increible diseño de su web.</p>
-                        <p class="op-card" id="op-star" class="stars">★★★★★</p>
-                    </div>
-                    <div class="arrow right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
-                </div>
-            </div>
-            <div class="flex"><button class="purple"><a href="#form-2">Join us</a></button></div>
-        </section>
-
-        <section id="metaverso">
-            <h1>Más que una red social</h1>
-            <h3>Conoce las experiencias de antiguos alumnos o
-                las instalaciones de los centros educativos.</h3>
-            <button class="pink">Próximamente</button>
-        </section>
-
-        <section class="center-title" id="seventh">
-            <h1>Partners</h1>
-            <div class="lanz"><img src="assets/Recursos/lanzadera.png"></div>
-            <h3>Algunos de nuestros partners</h3>
-            <div class="slider">
-                <div class="uni-logo">
-                    <a class="link" href="https://www.facebook.com/Unavir-108107404246902/" target="_blank"><img class="partner" src="assets/Recursos/logos/unavir.jpg" alt=""/></a>
-                </div>
-                <div class="uni-logo">
-                    <a class="link" href="https://elingua.es/" target="_blank"><img class="partner" src="assets/Recursos/logos/elingua.png" alt=""/></a>
-                </div>
-                <div class="uni-logo">
-                    <a class="link" href="https://lunarxy.com/" target="_blank"><img class="partner" src="assets/Recursos/logos/lunar.jpg" alt=""/></a>
-                </div>
-                <div class="uni-logo">
-                    <a class="link" href="" target="_blank"><img class="partner" src="assets/Recursos/logos/Iso gradiente.png" alt=""/></a>
+        <main>
+            <div class="header">
+                <div ><img src="assets/Logo-gradiente.png "class="logo"></div>
+                <div class="flex pages">
+                    <p><b>Estudiante</b></p>
+                    <p><a href="centros.html">Universidad</a></p>
+                    <p><a href="index.html">EN</a> |</p>
+                    <p><b>ES</b></p>
                 </div>
             </div>
 
-        </section>
-        
-        <section id="contact">
-            <h1>¿Deseas contactar con nosotros?</h1>
-            <div class="flex-l">
-                <div class="bottom">
-                    
-                    <form id="contact-form" action="https://formsubmit.co/caira@caira.io" method="POST">
-                        <input type="text" placeholder="Name"><br>
-                        <input type="text" name="email" placeholder="Email"><br>
-                        <input type="hidden" name="_captcha" value="false"/>
-                        <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/>
-                        <input type="hidden" name="_template" value="table"/>
-                        <input type="hidden" name="_next" value={window.location.href}></input>
-                        <textarea name="message"></textarea>
-                        <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
-                        <button type="submit" class="purple" id="send-contact">Enviar</button>
+            <section class="flex" id="first">   
+                <article>
+                    <h2>Conecta con</h2>
+                    <h1>universidades</h1>
+                    <p>Te ayudamos a decidir tu futuro</p>
+                </article>
+
+                <div class="form">
+                    <form id="form-1" style="display: none;">
+                        <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                        <input id="loginEmail" type="email" placeholder="Email"><br>
+                        <input id="loginPwd"  type="password" placeholder="Password"><br>
+                        <input type="submit" value="Log in" onclick="loginButton()"><br>
+                        <div class="google">
+                            <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
+                                <img class="lg" src="assets/Recursos/google-brands.svg">Login with Google </a><br>  
+                        </div>
+                        <a href="#" id="a-form1">¿Eres nuevo en Caira? ¡Regístrate ya!</a>
+                    </form>
+                    <form id="form-2" onsubmit="registerButton()">
+                        <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
+                        <div class="flex">
+                            <input id="username" type="text" placeholder="Nombre">
+                            <input id="usersurname" type="text" placeholder="Apellidos">
+                        </div>
+                        <input id="useremail" type="email" placeholder="Email">
+                        <div class="flex">
+                            <input id="userpwd" type="password" placeholder="Contraseña">
+                            <input id="userpwdconf" type="password" placeholder="Repite la contraseña">
+                        </div>
+                        <input id="signupbtn" type="submit" value="Regístrate"><br>
+                        <div class="google">
+                            <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
+                                <img class="lg" src="assets/Recursos/google-brands.svg">Registrar con Google</a><br>  
+                        </div>
+                        <!-- <a href="#" id="a-form2">Already have an account? Log in</a>-->
                     </form>
                 </div>
+            </section>
 
-                <div class="bottom">
-                    <p>Estamos en:</p>
-                    <img class="lanz" src="assets/Recursos/lanzadera.png">
-                    <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
-                    <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
-                    <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
-
-                    <p>Síguenos</p>
-                    <div class="flex social">
-                        <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-azul.svg"></a>
-                        <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-azul.svg"></a>
-                        <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-azul.svg"></a>
+            <section id="second">
+                <div class="flex" id="sec2">
+                    <div>
+                        <p><img class="icon" src="assets/Recursos/flecha.png"></p>
+                        <h1>¿Qué es Caira?</h1>
+                        <p><b>Caira</b> es una red social donde se muestra toda la oferta
+                            educativa en un mismo portal.</p>
+                        <p>De tal forma que si estás perdido y no sabes dónde estudiar lo
+                            que te apasiona, en Caira podrás descubrir centros y opiniones
+                            que te facilitarán tomar esa decisión.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+            <section class="center-title" id="third">
+                <h1>Caira te ayuda a trazar el camino,
+                    tú lo recorres</h1>
+                <p class="text-pink">Una comunidad donde crecer y avanzar
+                    en tu vida profesional.</p>
+                <br>
+                <div id="cards-resp">
+                    <div class="flex">
+                        <div class="arrow2 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
+                        <div class="info-card back-white text-purple">
+                            <p><img id="in-img" src="assets/Recursos/Informate.png"></p>
+                            <h3 id="in-title">Infórmate</h3>
+                            <p id="in-sub">Discover all the avaliable options</p>
+                        </div>
+                        <div class="arrow2 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
+                    </div>
+                </div>
+                <div class="flex" id="cards">
+                    <div data-aos="fade-up"data-aos-offset="200" class="info-card">
+                        <p><img src="assets/Recursos/Informate.png"></p>
+                        <h3>Infórmate</h3>
+                        <p>Descubre todas las opciones que están en tu mano.</p>
+                    </div>
+                    <div data-aos="fade-up"data-aos-offset="300" class="info-card">
+                        <p><img src="assets/Recursos/Interactua.png"></p>
+                        <h3>Interactúa</h3>
+                        <p>Conoce las experiencias de antiguos alumnos.</p>
+                    </div>
+                    <div data-aos="fade-up"data-aos-offset="400" class="info-card">
+                        <p><img src="assets/Recursos/Compara.png"></p>
+                        <h3>Compara</h3>
+                        <p>Valora los pros y contras de tu opciones.</p>
+                    </div>
+                    <div data-aos="fade-up"data-aos-offset="500" class="info-card">
+                        <p><img src="assets/Recursos/Lanzate.png"></p>
+                        <h3>¡Lánzate!</h3>
+                        <p>Recoge todo lo necesario y ¡cómete el mundo!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fourth">
+                <h1>Toda la formación<br>al alcance de tu mano</h1>
+                <img data-aos="zoom-in" id="map-ed" src="assets/Recursos/map.png">
+            </section>
+
+            <section class="center-title" id="fifth">
+                <h1>¿Estás buscando una carrera profesional?</h1>
+                <h3>No estás solo :)</h3>
+                <div class="flex">
+                    <div class="carrusel flex">
+                        <div class="arrow left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
+                        <div class="back-white card-opinion">
+                            <p><img class="op-card" id="op-img" src="assets/Iso gradiente.png"></p>
+                            <p class="op-card" id="op-txt">Aquí el estudiante escribirá lo fantastica y maravillosa que es Caira y el increible diseño de su web.</p>
+                            <p class="op-card" id="op-star" class="stars">★★★★★</p>
+                        </div>
+                        <div class="arrow right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
+                    </div>
+                </div>
+                <div class="flex"><button class="purple"><a href="#form-2">Join us</a></button></div>
+            </section>
+
+            <section id="metaverso">
+                <h1>Más que una red social</h1>
+                <h3>Conoce las experiencias de antiguos alumnos o
+                    las instalaciones de los centros educativos.</h3>
+                <button class="pink">Próximamente</button>
+            </section>
+
+            <section class="center-title" id="seventh">
+                <h1>Partners</h1>
+                <div class="lanz"><img src="assets/Recursos/lanzadera.png"></div>
+                <h3>Algunos de nuestros partners</h3>
+                <div class="slider">
+                    <div class="uni-logo">
+                        <a class="link" href="https://www.facebook.com/Unavir-108107404246902/" target="_blank"><img class="partner" src="assets/Recursos/logos/unavir.jpg" alt=""/></a>
+                    </div>
+                    <div class="uni-logo">
+                        <a class="link" href="https://elingua.es/" target="_blank"><img class="partner" src="assets/Recursos/logos/elingua.png" alt=""/></a>
+                    </div>
+                    <div class="uni-logo">
+                        <a class="link" href="https://lunarxy.com/" target="_blank"><img class="partner" src="assets/Recursos/logos/lunar.jpg" alt=""/></a>
+                    </div>
+                    <div class="uni-logo">
+                        <a class="link" href="" target="_blank"><img class="partner" src="assets/Recursos/logos/Iso gradiente.png" alt=""/></a>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="contact">
+                <h1>¿Deseas contactar con nosotros?</h1>
+                <div class="flex-l">
+                    <div class="bottom">
+                        
+                        <form id="contact-form" action="https://formsubmit.co/caira@caira.io" method="POST">
+                            <input type="text" placeholder="Name"><br>
+                            <input type="text" name="email" placeholder="Email"><br>
+                            <input type="hidden" name="_captcha" value="false"/>
+                            <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/>
+                            <input type="hidden" name="_template" value="table"/>
+                            <input type="hidden" name="_next" value={window.location.href}></input>
+                            <textarea name="message"></textarea>
+                            <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
+                            <button type="submit" class="purple" id="send-contact">Enviar</button>
+                        </form>
+                    </div>
+
+                    <div class="bottom">
+                        <p>Estamos en:</p>
+                        <img class="lanz" src="assets/Recursos/lanzadera.png">
+                        <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
+                        <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
+                        <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
+
+                        <p>Síguenos</p>
+                        <div class="flex social">
+                            <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-azul.svg"></a>
+                            <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-azul.svg"></a>
+                            <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-azul.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     <!--Pie de página-->
-    <footer>
-        <div class="ft-logo">
-            <img src="assets/Logo-gris.png">
-        </div>
-
-        <div class="ft-text">
-            <div class="flex legal">
-                <p>Aviso legal</p>
-                <p>Política de privacidad</p>
-                <p>Política de cookies</p>
+        <footer>
+            <div class="ft-logo">
+                <img src="assets/Logo-gris.png">
             </div>
 
-            <div class="social">
-                <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-gris.svg"></a>
-                <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-gris.svg"></a>
-                <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-gris.svg"></a>
+            <div class="ft-text">
+                <div class="flex legal">
+                    <p>Aviso legal</p>
+                    <p>Política de privacidad</p>
+                    <p>Política de cookies</p>
+                </div>
+
+                <div class="social">
+                    <a href="https://twitter.com/Caira_education"><img src="assets/Recursos/facebook-gris.svg"></a>
+                    <a href="https://www.instagram.com/caira.io/"><img src="assets/Recursos/instagram-gris.svg"></a>
+                    <a href="https://www.linkedin.com/company/caira-education/"><img src="assets/Recursos/linkedin-gris.svg"></a>
+                </div>
+
+                <div>
+                    <p>Caira © 2022</p>
+                </div> 
+        
             </div>
+        </footer>
 
-            <div>
-                <p>Caira © 2022</p>
-            </div> 
-    
-        </div>
-    </footer>
-
-<script src="partners.js"></script>
-<script src="students.js"></script>
-<script src="cognito/register.js"></script>
-<script src="cognito/login.js"></script>
-<script>
-    AOS.init();
-  </script>
-</body>
+        <script src="partners.js"></script>
+        <script src="students.js"></script>
+        <script src="cognito/register.js"></script>
+        <script src="cognito/login.js"></script>
+        <script>AOS.init();</script>
+    </body>
 </html>
