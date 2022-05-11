@@ -40,6 +40,10 @@
     #metaverso{
         height: auto;
     }
+    .pages p{
+        margin-top: 14px;
+    }
+        
     #google{
         margin-left: auto;
         margin-right: auto;
@@ -112,6 +116,9 @@
     #center-1 article{
         height: 350px;
     }
+    .pages p{
+        margin-top: 15px;
+    }
     .ft-logo img{
         width: 250px!important;
         margin-top: 20px;
@@ -142,6 +149,9 @@
 }
 
 @media (max-width: 700px) {
+    .pages p{
+        margin-top: 25px;
+    }
     .lanz img, .lanz{
         width: 300px;
     }
@@ -228,6 +238,9 @@
 }
 
 @media (max-width: 420px) {
+    .pages p{
+        margin-top: 27px;
+    }
     .lanz img, .lanz{
         width: 200px;
     }

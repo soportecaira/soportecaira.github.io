@@ -38,39 +38,6 @@ let cairaInfo = [
     }
 ];
 
-let partners = [ 
-    ["ada.jpg","bcas.png","isam.jpg","trepcamp.png"],
-    ["4geeks.png","assembler.jpg","hult.png","ironhack.jpg"],
-    ["retail.png","siena.png","sige.png","techma.png"],
-    ["unavir.jpg","elingua.png","lunar.jpg","Iso gradiente.png"]
-];
-
-let enlances = [ 
-    ["https://ada-school.org/","https://bcasapp.com/","https://isam.education/","https://www.trepcamp.org/"],
-    ["https://4geeksacademy.com/es/inicio","https://assemblerinstitute.com/","https://www.hult.edu/","https://www.ironhack.com/en"],
-    ["https://retail-institute.org/","https://www.siena.edu/programs/education/","https://www.sige.es/","https://techmabs.com/"],
-    ["https://www.facebook.com/Unavir-108107404246902/","https://elingua.es/","https://lunarxy.com/",""]
-];
-
-setInterval(function(){
-    let part = document.getElementsByClassName("partner");
-    let links = document.getElementsByClassName("link");
-    for(let i=0; i<part.length; i++){
-        part[i].setAttribute("src", "assets/Recursos/logos/"+partners[pt][i]);
-        part[i].style.animation = 'none';
-        part[i].offsetHeight; /* trigger reflow */
-        part[i].style.animation = null;
-        links[i].setAttribute("href", enlances[pt][i]);
-    }
-
-    pt++;
-    if(pt==partners.length){
-        pt=0;
-    }
-}, 5000);
-
-
-
 const cambiarInfo = () =>{
     let title = document.getElementById("in-title");
     let sub = document.getElementById("in-sub");
@@ -104,12 +71,13 @@ const cambiarMensaje = () =>{
 }
 
 window.onload = function(){
-    //let logo = document.querySelector('.container');
-    //let menu = document.querySelector('.menu');
-    // logo.addEventListener('click',function(){
-    //     menu.classList.toggle('mobile');
-    //     menu.classList.toggle('showmenu');  
-    // });
+    /*
+    let logo = document.querySelector('.container');
+    let menu = document.querySelector('.menu');
+    logo.addEventListener('click',function(){
+        menu.classList.toggle('mobile');
+        menu.classList.toggle('showmenu');  
+    });
 
     let goToRegister = document.getElementById("a-form1");
     let goToLogin = document.getElementById("a-form2");
@@ -117,9 +85,9 @@ window.onload = function(){
     let register = document.getElementById("form-2");
     let form = document.getElementsByClassName("form")[0];
 
-    let arrows = document.getElementsByClassName("arrow");
-    let arrows2 = document.getElementsByClassName("arrow2");
-   /*
+   
+
+   
     goToRegister.addEventListener("click",function(){
         login.style.display = "none";
         register.style.display = "block";
@@ -129,9 +97,11 @@ window.onload = function(){
         login.style.display = "block";
         register.style.display = "none";
         form.style.height = "450px";
-    });*/
+    });
+    */
 
-    
+    let arrows = document.getElementsByClassName("arrow");
+    let arrows2 = document.getElementsByClassName("arrow2");
 
     arrows[0].addEventListener("click", function(){
         p--;

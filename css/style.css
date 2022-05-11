@@ -133,7 +133,7 @@ section.no-padding {
   width: 650px;
 }
 
-.arrow2, .arrow {
+.arrow2, .arrow, .arrow3 {
   height: 40px;
   width: 40px;
   text-align: center;
@@ -444,6 +444,13 @@ footer .ft-text .legal p {
   background-repeat: no-repeat;
   color: #f2f2f2;
   height: 700px;
+}
+
+#center-1 {
+  background-image: url("../assets/Recursos/fondo2.png");
+  background-position: left 90% top 10px;
+  background-size: 40%;
+  background-repeat: no-repeat;
 }
 
 #first {
