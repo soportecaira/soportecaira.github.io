@@ -12,7 +12,6 @@ function registerButton() {
     message = document.getElementById("errorMessage");
     regexSpecialCharacters = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\^$*.\[\]{}\(\)?\-“!@#%&/,><\’:;|_~`])\S{8,99}$/;
 
-
     if(!document.getElementById("username").value || document.getElementById("username").length === 0 ){
         message.style.display="block";
         message.innerHTML="The name cannot be empty.";
@@ -59,7 +58,7 @@ function registerButton() {
 
     if(!regexSpecialCharacters.test(userpwd.value)){
         message.style.display="block";
-        message.innerHTML="The password must contain at least 1 special character.";
+        message.innerHTML="The password must contain at least one special character, one lower and one upper case .";
         return false;
     } else {
         password = userpwd.value;
@@ -95,6 +94,15 @@ function registerButton() {
     userPool.signUp(email, password, attributeList, null, function(err, result){
         if (err) {
             console.log(err.message || JSON.stringify(err));
+            console.log(err.message);
+            console.log(JSON.stringify(err));
+            if(err.message =="User already exists" ||  JSON.stringify(err).includes("UsernameExistsException")){
+                new Notify ({
+                    title: 'Registro no efectuado',
+                    text: 'El correo introducido ya existe.',
+                    status: 'error'
+                });
+            }
             return;
         }
 
@@ -106,6 +114,8 @@ function registerButton() {
             status: 'success'
         })
     });
+
+    message.style.display="none";
 
     return true;
 }
