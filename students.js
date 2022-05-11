@@ -55,6 +55,7 @@ const cambiarInfo = () =>{
 }
 
 const cambiarMensaje = () =>{
+    let card = document.getElementsByClassName("op-card");
     let txt = document.getElementById("op-txt");
     let star = document.getElementById("op-star");
     let img = document.getElementById("op-img");
@@ -63,11 +64,20 @@ const cambiarMensaje = () =>{
     let n_star = document.createTextNode(mensajes[p].stars);
     let n_img = mensajes[p].image;
 
-    star.removeChild(star.firstChild);
-    txt.removeChild(txt.firstChild);
-    img.setAttribute("src",n_img);
-    star.appendChild(n_star);
-    txt.appendChild(n_txt);
+    for(let i=0; i<card.length; i++){
+
+        star.removeChild(star.firstChild);
+        txt.removeChild(txt.firstChild);
+        img.setAttribute("src",n_img);
+        star.appendChild(n_star);
+        txt.appendChild(n_txt);
+
+        card[i].style.animation = 'fadeIn 1.5s';
+
+        setTimeout(()=>{
+            card[i].style.animation = "";
+        },500);
+    }
 }
 
 window.onload = function(){

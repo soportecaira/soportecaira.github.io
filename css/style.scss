@@ -72,7 +72,8 @@ button{
 .logo{
     width: 200px;
     margin-left: 30px;
-    height: auto;    
+    margin-right: 30px;
+    height: auto;  
 }
 .center-title{
     h1,h2,h3,p{
@@ -451,12 +452,17 @@ footer{
 .pages{
     p{
         margin-top: 52px;
-        margin-left: 30px;
+        margin-right: 20px;
         font-size: 30px;
         a{
             text-decoration: none;
         }
     }
+}
+
+.header{
+    display: flex;
+    margin-left: 2%;
 }
 
 
