@@ -62,6 +62,9 @@ window.onload=function(){
 }
 
 function makeApiCall() {
+    let email = document.getElementById("").value;
+    let dateTime = new Date().toISOString();
+
     let event = {
         'summary': 'Caira Meeting',
         'location': 'Google meet',
