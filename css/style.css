@@ -96,10 +96,6 @@ button a {
   justify-content: center;
 }
 
-#languages a:hover {
-  font-weight: bold;
-}
-
 section {
   padding: 5%;
 }
@@ -127,7 +123,7 @@ section {
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
   margin-left: 30px;
   margin-right: 30px;
   height: auto;
