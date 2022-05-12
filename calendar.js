@@ -1,6 +1,9 @@
+
+
 const reservar = () =>{
+
     let email = document.getElementById("email-book").value;
-    let dateTime = "2015-05-28T09:00:00-07:00";
+    let dateTime = "2022-05-28T09:00:00-07:00";
 
     let event = {
         'summary': 'Caira Meeting',
@@ -44,6 +47,6 @@ window.onload = function(){
     let book = document.getElementById("book");
     book.addEventListener("click", function(ev){    
         ev.preventDefault();
-        reservar();
-    })
+        handleAuthClick();
+    });
 }
