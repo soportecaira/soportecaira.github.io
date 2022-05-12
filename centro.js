@@ -1,6 +1,7 @@
 let count = 0;
 
 let clientId = "682265920906-vc0mg2l9hvhv36f566ce2mduev2126lf.apps.googleusercontent.com";
+let clientSecret = "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";
 let APIkey = "AIzaSyBoanGvwf6KXRyvkH_6OJCuhyonksIYvFI";
 let scope = "https://www.googleapis.com/auth/calendar";
 
@@ -99,8 +100,8 @@ function makeApiCall() {
             'resource': event
         });
             
-      request.execute(function(event) {
-        alert('Event created: ' + event.htmlLink);
+      request.execute(function(resp) {
+        alert('Event created: ' + resp.htmlLink);
         });
     });
   }
