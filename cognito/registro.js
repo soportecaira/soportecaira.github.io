@@ -6,7 +6,7 @@ var message;
 var regexSpecialCharacters;
 var userpwd;
 
-function registerButton() {
+function registroBoton() {
     email = document.getElementById("useremail").value;
     userpwd = document.getElementById("userpwd");
     message = document.getElementById("errorMessage");
@@ -14,11 +14,11 @@ function registerButton() {
 
     if(!document.getElementById("username").value || document.getElementById("username").length === 0 ){
         message.style.display="block";
-        message.innerHTML="The name cannot be empty.";
+        message.innerHTML="El nombre no puede estar vacío.";
         return false;
     } else if(!document.getElementById("usersurname").value || document.getElementById("usersurname").length === 0 ) {
         message.style.display="block";
-        message.innerHTML="The surname cannot be empty.";
+        message.innerHTML="El apellido no puede estar vacío.";
         return false;
     }else {
         userName = document.getElementById("username").value + ' ' + document.getElementById("usersurname").value;
@@ -26,7 +26,7 @@ function registerButton() {
 
     if(userpwd.value != document.getElementById("userpwdconf").value){
         message.style.display="block";
-        message.innerHTML="Passwords don't match.";
+        message.innerHTML="Las contraseñas no coinciden.";
         return false;
     } else {
         password = userpwd.value;
@@ -34,7 +34,7 @@ function registerButton() {
     
     if(userpwd.value.length < 8){
         message.style.display="block";
-        message.innerHTML="The password must contain at least 8 characters.";
+        message.innerHTML="La contraseña debe contener al menos 8 carácteres.";
         return false;
     } else {
         password = userpwd.value;
@@ -42,7 +42,7 @@ function registerButton() {
 
     if(userpwd.value.length > 15){
         message.style.display="block";
-        message.innerHTML="The password must contain 15 characters maximum.";
+        message.innerHTML="La contraseña debe contener un máximo de 15 carácteres.";
         return false;
     } else {
         password = userpwd.value;
@@ -50,7 +50,7 @@ function registerButton() {
 
     if(!/\d/.test(userpwd.value)){
         message.style.display="block";
-        message.innerHTML="The password must contain 1 number minimum.";
+        message.innerHTML="La contraseña debe contener un número como mínimo.";
         return false;
     } else {
         password = userpwd.value;
@@ -59,6 +59,7 @@ function registerButton() {
     if(!regexSpecialCharacters.test(userpwd.value)){
         message.style.display="block";
         message.innerHTML="The password must contain at least one special character, one lower and one upper case .";
+        message.innerHTML="La contraseña debe contener al menos un carácter especial, una mínuscula y una mayúscula.";
         return false;
     } else {
         password = userpwd.value;
@@ -98,8 +99,8 @@ function registerButton() {
             console.log(JSON.stringify(err));
             if(err.message =="User already exists" ||  JSON.stringify(err).includes("UsernameExistsException")){
                 new Notify ({
-                    title: 'Invalid registration',
-                    text: 'The entered email already exists.',
+                    title: 'Registro no efectuado',
+                    text: 'El correo introducido ya existe.',
                     status: 'error'
                 });
             }
@@ -109,8 +110,8 @@ function registerButton() {
         cognitoUser = result.user;
 
         new Notify ({
-            title: 'Registration completed',
-            text: 'We have sent you an email to verify your account.',
+            title: 'Registro efectuado',
+            text: 'Te hemos enviado un correo para verificar tu cuenta.',
             status: 'success'
         })
     });
