@@ -84,7 +84,7 @@
                         </div>
                         <a href="#" id="a-form1">¿Eres nuevo en Caira? ¡Regístrate ya!</a>
                     </form>
-                    <form id="form-2" onsubmit="registerButton()">
+                    <form id="form-2" onsubmit="return registroBoton()">
                         <div class="flex"><h3>Únete a la comunidad</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
                         <div class="flex">
                             <input id="username" type="text" placeholder="Nombre">
@@ -95,6 +95,7 @@
                             <input id="userpwd" type="password" placeholder="Contraseña">
                             <input id="userpwdconf" type="password" placeholder="Repite la contraseña">
                         </div>
+                        <p id="errorMessage"></p>
                         <input id="signupbtn" type="submit" value="Regístrate"><br>
                         <div class="google">
                             <a href="https://caira.auth.eu-central-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&response_type=token&client_id=2lhfuid7ce4uamq05phqotlnk2&redirect_uri=https://apicaira.lunarxy.com/docs&scope=aws.cognito.signin.user.admin+email+openid+profile">
@@ -274,7 +275,7 @@
 
         <script src="partners.js"></script>
         <script src="students.js"></script>
-        <script src="cognito/register.js"></script>
+        <script src="cognito/registro.js"></script>
         <script src="cognito/login.js"></script>
         <script>AOS.init();</script>
     </body>
