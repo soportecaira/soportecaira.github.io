@@ -58,10 +58,14 @@
             <div class="header">
                 <div ><img src="assets/Logo-gradiente.png "class="logo"></div>
                 <div class="flex pages">
-                    <p><b>Estudiante</b></p>
-                    <p><a href="centros.html">Universidad</a></p>
-                    <p><a href="index.html">EN</a> |</p>
-                    <p><b>ES</b></p>
+                    <div class="links">
+                        <p><b>Estudiante</b></p>
+                        <p><a href="centrosES.html">Universidad</a></p>
+                    </div>
+                    <div id="languages">
+                        <p><a href="index.html">EN |</a></p>
+                        <p class="spanish"><b>ES</b></p>
+                    </div>
                 </div>
             </div>
 
@@ -127,12 +131,12 @@
                     en tu vida profesional.</p>
                 <br>
                 <div id="cards-resp">
-                    <div class="flex">
+                    <div class="flex flex-info">
                         <div class="arrow2 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
                         <div class="info-card back-white text-purple">
                             <p><img id="in-img" src="assets/Recursos/Informate.png"></p>
                             <h3 id="in-title">Infórmate</h3>
-                            <p id="in-sub">Discover all the avaliable options</p>
+                            <p id="in-sub">Descubre todas las opciones que están en tu mano.</p>
                         </div>
                         <div class="arrow2 right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
                     </div>
@@ -222,7 +226,7 @@
                             <input type="hidden" name="_captcha" value="false"/>
                             <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/>
                             <input type="hidden" name="_template" value="table"/>
-                            <input type="hidden" name="_next" value={window.location.href}></input>
+                            <input type="hidden" name="_next" value={window.location.href}/>
                             <textarea name="message"></textarea>
                             <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
                             <button type="submit" class="purple" id="send-contact">Enviar</button>
@@ -234,7 +238,7 @@
                         <img class="lanz" src="assets/Recursos/lanzadera.png">
                         <div class="loc"><img src="assets/Recursos/enviar.png"><p>Caira@caira.io</p></div>
                         <div class="loc"><img src="assets/Recursos/ubicacion.png"><p>Edificio Lanzadera, Carrer del moll de la aduana S/N</p></div>
-                        <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 600 000 000</p></div>
+                        <div class="loc"><img src="assets/Recursos/telefono.png"><p>+34 619 286 343</p></div>
 
                         <p>Síguenos</p>
                         <div class="flex social">
