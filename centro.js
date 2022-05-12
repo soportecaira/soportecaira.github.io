@@ -116,7 +116,6 @@ function makeApiCall() {
   function handleAuthResult(authResult) {
     var authorizeButton = document.getElementById('authorize-button');
     if (authResult) {
-      authorizeButton.style.visibility = 'hidden';
       makeApiCall();
     } else {
       authorizeButton.style.visibility = '';
