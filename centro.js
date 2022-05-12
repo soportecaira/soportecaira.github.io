@@ -62,7 +62,7 @@ window.onload=function(){
 }
 
 function makeApiCall() {
-    let email = document.getElementById("").value;
+    let email = document.getElementById("email-book").value;
     let dateTime = new Date().toISOString();
 
     let event = {
