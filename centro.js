@@ -62,7 +62,7 @@ window.onload=function(){
 }
 
 function makeApiCall() {
-    let email = document.getElementById("").value;
+    let email = document.getElementById("email-book").value;
     let dateTime = new Date().toISOString();
 
     let event = {
@@ -100,7 +100,7 @@ function makeApiCall() {
         });
             
       request.execute(function(event) {
-        appendPre('Event created: ' + event.htmlLink);
+        alert('Event created: ' + event.htmlLink);
         });
     });
   }
@@ -112,8 +112,7 @@ function makeApiCall() {
   }
   
   function checkAuth() {
-    gapi.auth.authorize({client_id: clientId, scope: scope, immediate: true},
-        handleAuthResult);
+    gapi.auth.authorize({client_id: clientId, scope: scope, immediate: true},handleAuthResult);
   }
   
   function handleAuthResult(authResult) {
@@ -127,8 +126,6 @@ function makeApiCall() {
   }
   
   function handleAuthClick(event) {
-    gapi.auth.authorize(
-        {client_id: clientId, scope: scope, immediate: false},
-        handleAuthResult);
+    gapi.auth.authorize({client_id: clientId, scope: scope, immediate: false},handleAuthResult);
     return false;
   }
