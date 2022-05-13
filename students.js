@@ -3,17 +3,17 @@ let count2 = 0;
 
 let mensajes = [
     {
-        message: "Aquí el estudiante escribirá lo fantastica y maravillosa que es Caira y el increible diseño de su web.",
+        message: "Caira me ha dado la oportunidad que necesitaba.",
         stars: "★★★★★",
-        image: "assets/Iso gradiente.png"
+        image: "assets/perfil1.jpg"
     },{
-        message: "Echaremos de menos la barra morada de Social Engine",
+        message: "El mejor lugar donde encontrar formación de todo tipo, sin duda",
         stars: "★★★★★",
-        image: "assets/Iso gradiente.png"
+        image: "assets/perfil2.jpg"
     },{
-        message: "Vendo Opel Corsa",
+        message: "Una idea prometedora",
         stars: "★★★★★",
-        image: "assets/Iso gradiente.png"
+        image: "assets/perfil3.jpg"
     }
 ];
 

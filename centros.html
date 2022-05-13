@@ -38,11 +38,23 @@
 
             <div class="form">
                 <form>
-                    <div class="flex"><h3>Contact with us</h3><img class="f-arrow" src="assets/Recursos/flecha-derecha.svg"></div>
-                    <input type="text" placeholder="Name"><br>
-                    <input type="text" placeholder="Company"><br>
-                    <input type="email" id="email-book" placeholder="Email"><br>
-                    <div id="book"><input type="submit" value="Book a call"></div><br>
+                    <div class="flex">
+                        <h3>Contact with us</h3>
+                        <img class="f-arrow" src="assets/Recursos/flecha-derecha.svg">
+                    </div>
+
+                    <div class="flex-c">
+                        <div class="flex-l">
+                            <p>Date:</p>
+                            <p><input type="date" id="date"></p>
+                        </div>
+                        <div class="flex-l">
+                            <p>Time:</p>
+                            <p><input type="time" id="time"></p> 
+                        </div>
+                    </div>
+
+                    <div id="book" class="flex"><div><input type="submit" value="Book a call"></div></div>
                 </form>
             </div>
         </section>
@@ -109,7 +121,7 @@
         
         <section id="contact">
             <h1>Contact with us</h1>
-            <div class="flex-l">
+            <div class="flex-lc">
                 <div class="bottom">
                     
                     <form id="contact-form" action="https://formsubmit.co/caira@caira.io" method="POST">

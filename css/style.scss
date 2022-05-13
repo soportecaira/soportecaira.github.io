@@ -83,10 +83,16 @@ section{
     display: flex;
     justify-content: center;
 }
-.flex-l{
+.flex-l,.flex-lc{
     display: flex;
     justify-content: left;
     flex-direction: row;
+}
+.flex-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo{
@@ -98,7 +104,7 @@ section{
 
 .pages{
     p{
-        margin-top: 52px;
+        margin-top: 33px;
         margin-right: 20px;
         font-size: 30px;
         a{
@@ -110,6 +116,23 @@ section{
 .header{
     display: flex;
     margin-left: 2%;
+    background-color: rgba(242,242,242,0.5);
+    #languages{
+        display: flex;
+        margin-left: 50px;
+    }
+    .links{
+        display: flex;
+    }
+}
+
+input[type="time"],input[type="date"]{
+    background-color: $cairaWhite;
+    border-radius: 30px;
+    border: 2px solid $cairaPink;
+    color: $cairaPurple;
+    padding: 10px;
+    margin-top: -30px
 }
 
 .form{
@@ -118,7 +141,6 @@ section{
     justify-content: center;
     width: 35%;
     background-color: rgba(242,242,242,0.5);
-    margin-top: 10x;
     height: 540px;
     border-radius: 40px;
     .f-arrow{
@@ -198,7 +220,6 @@ section{
 
 #first{
     height: 700px;
-    margin-top: -191px;
     justify-content: left !important;
     article{
         width: 65%;
@@ -322,6 +343,10 @@ footer{
         .legal{
             p{
                 margin-right: 20px;
+                a{
+                    text-decoration: none;
+                    color: $cairaWhite;
+                }
             }
         }
     }
