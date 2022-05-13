@@ -67,27 +67,27 @@ window.onload=function(){
 }
 
 function createEvent() {
-    let email = document.getElementById("email-book").value;
-    let dateTime = new Date().toISOString();
+    //let email = document.getElementById("email-book").value;
+    //let dateTime = new Date().toISOString();
 
     let event = {
         'summary': 'Caira Meeting',
         'location': 'Google meet',
         'description': 'Know more about Caira',
         'start': {
-        'dateTime': dateTime,
-        'timeZone': 'Spain/Madrid'
+        'dateTime': "2022-10-31T17:00:00.000",
+        'timeZone': 'GMT-01:00'
         },
         'end': {
-        'dateTime': dateTime,
-        'timeZone': 'Spain/Madrid'
+        'dateTime': "2022-10-31T17:00:00.000",
+        'timeZone': 'GMT-01:00'
         },
         'recurrence': [
         'RRULE:FREQ=DAILY;COUNT=2'
         ],
         'attendees': [
         {'email': 'martisanchis2000@gmail.com'},
-        {'email': email}
+        {'email': 'caira@caira.io'}
         ],
         'reminders': {
         'useDefault': false,
