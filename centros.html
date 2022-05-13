@@ -42,7 +42,7 @@
                     <input type="text" placeholder="Name"><br>
                     <input type="text" placeholder="Company"><br>
                     <input type="email" id="email-book" placeholder="Email"><br>
-                    <div id="book"><input type="submit"  value="Book a call"></div><br>
+                    <div id="book"><input type="submit" value="Book a call"></div><br>
                 </form>
             </div>
         </section>
@@ -166,11 +166,10 @@
 
     </div>
 </footer>
-<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-<script src="https://apis.google.com/js/api.js"></script>
-<script src="partners.js"></script>
 <script src="centro.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+<script src="partners.js"></script>
 <script src="cognito/register.js"></script>
 <script src="cognito/login.js"></script>
 </body>

@@ -1,9 +1,13 @@
 let count = 0;
 
-let clientId = "682265920906-vc0mg2l9hvhv36f566ce2mduev2126lf.apps.googleusercontent.com";
-let clientSecret = "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";
-let APIkey = "AIzaSyBoanGvwf6KXRyvkH_6OJCuhyonksIYvFI";
-let scope = "https://www.googleapis.com/auth/calendar";
+const CLIENT_ID = "682265920906-vc0mg2l9hvhv36f566ce2mduev2126lf.apps.googleusercontent.com";
+const API_KEY = "AIzaSyBoanGvwf6KXRyvkH_6OJCuhyonksIYvFI";
+const SCOPES = "https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar";
+const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
+let tokenClient;
+let gapiInited = false;
+let gisInited = false;
+
 
 let cairaInfoCentro = [
     {
@@ -62,7 +66,7 @@ window.onload=function(){
     });
 }
 
-function makeApiCall() {
+function createEvent() {
     let email = document.getElementById("email-book").value;
     let dateTime = new Date().toISOString();
 
@@ -101,32 +105,58 @@ function makeApiCall() {
         });
             
       request.execute(function(resp) {
-        alert('Event created: ' + resp.htmlLink);
+        console.log('Event created: ' + resp.htmlLink);
         });
     });
   }
 
-  function handleClientLoad() {
-    gapi.client.setApiKey(APIkey);
-    window.setTimeout(checkAuth,1);
-    checkAuth();
+  function gapiLoaded() {
+    gapi.load('client', intializeGapiClient);
   }
-  
-  function checkAuth() {
-    gapi.auth.authorize({client_id: clientId, scope: scope, immediate: true},handleAuthResult);
+
+  /**
+   * Callback after the API client is loaded. Loads the
+   * discovery doc to initialize the API.
+   */
+  async function intializeGapiClient() {
+    await gapi.client.init({
+      apiKey: API_KEY,
+      discoveryDocs: [DISCOVERY_DOC],
+    });
+    gapiInited = true;
   }
-  
-  function handleAuthResult(authResult) {
-    var authorizeButton = document.getElementById('authorize-button');
-    if (authResult) {
-      makeApiCall();
+
+  /**
+   * Callback after Google Identity Services are loaded.
+   */
+  function gisLoaded() {
+    tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: CLIENT_ID,
+      scope: SCOPES,
+      callback: '', // defined later
+    });
+    gisInited = true;
+  }
+
+  /**
+   *  Sign in the user upon button click.
+   */
+  function handleAuthClick() {
+    tokenClient.callback = async (resp) => {
+      if (resp.error !== undefined) {
+        throw (resp);
+      }
+      await createEvent();
+    };
+
+    if (gapi.client.getToken() === null) {
+      // Prompt the user to select an Google Account and asked for consent to share their data
+      // when establishing a new session.
+      tokenClient.requestAccessToken({prompt: 'consent'});
     } else {
-      authorizeButton.style.visibility = '';
-      authorizeButton.onclick = handleAuthClick;
-     }
+      // Skip display of account chooser and consent dialog for an existing session.
+      tokenClient.requestAccessToken({prompt: ''});
+    }
   }
+
   
-  function handleAuthClick(event) {
-    gapi.auth.authorize({client_id: clientId, scope: scope, immediate: false},handleAuthResult);
-    return false;
-  }
