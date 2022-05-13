@@ -98,17 +98,15 @@ function createEvent() {
         }
     };
 
-    gapi.client.load('calendar', 'v3', function() {
-        let request = gapi.client.calendar.events.insert({
-            'calendarId': 'primary',
-            'resource': event
-        });
-            
-      request.execute(function(resp) {
-        console.log('Event created: ' + resp.htmlLink);
-        });
-    });
-  }
+    let request = gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': event
+      });
+      
+      request.execute(function(event) {
+        console.log('Event created: ' + event.htmlLink);
+      });
+}
 
   function gapiLoaded() {
     gapi.load('client', intializeGapiClient);
