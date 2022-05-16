@@ -373,18 +373,23 @@
     .lanz img, .lanz{
         width: 200px;
     }
+    
     .info-card {
-        margin: 0;
+        margin-left: 3% !important;
+        margin-right: 3% !important;
+        width: 80% !important;
     }
-    .arrow, .arrow2, .arrow3{
+    .info-card p img{
+       width: 180px;
+       height: 180px;
+    }
+     .arrow, .arrow2, .arrow3{
         width: 20px;
-        display: flex;
-        margin-left: 10px;
-        margin-right: 10px;
+    } 
+    .arrow2{
+        margin-top: 220px;
     }
-    .flex-info {
-        margin: 40px;
-    }
+    
     .slider {
         display: flex;
         margin: 5px;
