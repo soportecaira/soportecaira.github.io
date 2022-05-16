@@ -21,12 +21,6 @@
     }
 }
 
-@media (max-width: 1250px) {
-    #first .form{
-        height: 500px;
-    }
-}
-
 @media (max-width: 1180px) {
     article h1, article h2{
         width: 100%;
@@ -52,12 +46,8 @@
         margin-left: 20px;
         margin-right: 2px;
     }
-    #languages p {
-        margin-left: 2px !important;
-    }
-    #languages p a {
-        margin-left: 2px !important;
-        padding: 0;
+    .info-card-2{
+        height: 460px;
     }
     .ft-logo{
         margin-top: 32px;
@@ -71,9 +61,15 @@
         margin-right: auto !important;
     }
 
+    #languages p {
+        margin-left: 2px !important;
+    }
+    #languages p a {
+        margin-left: 2px !important;
+        padding: 0;
+    }
     #book{
-        display: flex;
-        justify-content: center;
+        margin: auto;
     }
     #center-1{
         background-size: 0;
@@ -84,15 +80,6 @@
     #center-1 article{
         text-align: center;
         width: 100%;
-    }
-    #center-1 .form{
-        width: 100%;
-        margin: 0;
-        padding-left: 0px;
-    }
-    #center-1 form{
-        width: 100% !important;
-        height: 300px;
     }
     #metaverso{
         height: auto;
@@ -121,7 +108,7 @@
     }
     #first .form{
         margin: auto;
-        width: 100%;
+        width: 60%;
         border-radius: 0;
         height: 300px;
         margin-top: 5%;
@@ -230,9 +217,12 @@
     #first{
         height: 700px;
     }
+    #first .form{
+        width: 100%;
+    }
     .uni-logo img{
-        width: 93px;
-        height: 93px;
+        width: 90px;
+        height: 90px;
     }
     .uni-logo{
         width: 95px;
@@ -252,6 +242,9 @@
     #second {
         margin-top: 10px;
     }  
+    #book{
+        width: 400px;
+    }
 }  
 
 @media (max-width: 500px) {
@@ -307,6 +300,13 @@
     }
     footer .ft-text div {
     margin-left: 50px !important;
+    }
+    #book{
+        width: 350px;
+        padding: 50px;
+    }
+    #book #calendy{
+        width: 250px;
     }
 }
 
@@ -379,7 +379,6 @@
     .arrow, .arrow2, .arrow3{
         width: 20px;
         display: flex;
-        margin-top: 190px;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -419,5 +418,12 @@
     #center-1 article{ 
         height: 6%;
         margin-bottom: 20px;
+    }
+    #book{
+        width: 95%;
+        padding: 40px;
+    }
+    #book #calendy{
+        width: 220px;
     }
 }

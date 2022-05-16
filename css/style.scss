@@ -63,8 +63,6 @@ button{
         color: $cairaPurple;
     }
     &:hover{
-        width: 220px;
-        height: 60px;
         font-size: 25px;
     }
     a{
@@ -124,15 +122,6 @@ section{
     .links{
         display: flex;
     }
-}
-
-input[type="time"],input[type="date"]{
-    background-color: $cairaWhite;
-    border-radius: 30px;
-    border: 2px solid $cairaPink;
-    color: $cairaPurple;
-    padding: 10px;
-    margin-top: -30px
 }
 
 .form{
@@ -219,7 +208,8 @@ input[type="time"],input[type="date"]{
 }
 
 #first{
-    height: 700px;
+    height: 680px;
+    bottom: 0;
     justify-content: left !important;
     article{
         width: 65%;
@@ -244,6 +234,7 @@ input[type="time"],input[type="date"]{
 #second{
     padding-left: 25%;
     padding-right: 25%;
+    top: 0;
 }
 
 .info-card, .info-card-2{
@@ -273,7 +264,13 @@ input[type="time"],input[type="date"]{
     }
 }
 .info-card-2{
-    height: 470px !important;
+    p{
+        img{
+            width: 170px;
+            height: 170px;
+        }
+    }
+    height: 490px !important;
     p{
         margin-top: 20px; 
         margin-bottom: 20px; 
@@ -288,7 +285,7 @@ input[type="time"],input[type="date"]{
    height: 40px;
    width: 40px;
    text-align: center;
-   margin-top: 210px;
+   margin-top: 190px;
 }
 .arrow{
     margin-top: 130px;
@@ -444,9 +441,15 @@ footer{
 .icon{
     width: 50px;
 }
+.icon-s{
+    width: 30px;
+}
 
 #cards-resp{
     display: none;
+}
+#thx{
+    text-align: center;
 }
 
 //Backgrounds
@@ -494,21 +497,28 @@ footer{
     article{
         width: 600px;
         height: 300px;
+        margin-right: 120px;
     }
-    .form{
-        width: 600px;
-        display: flex;
-        justify-content: center;
-        padding-left: 120px;
-        form{
-            box-shadow: $shadow;
-            width: 400px;
-            height: 450px;
-            padding: 5%;
-            background-color: white;
-            border-radius: 40px;
+}
+#book{
+    padding: 60px;
+    width: 500px;
+    align-items: center;
+    h3{
+        text-align: center;
+        margin-top: 0;
+    }
+    #calendy{
+        background-color: $cairaPink;
+        border-radius: 40px;
+        width: 300px;
+        img {
+            margin-right: 10px;
         }
     }
+    background-color: white;
+    border-radius: 80px;
+    box-shadow: $shadow;
 }
 
 

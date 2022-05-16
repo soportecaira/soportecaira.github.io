@@ -1,12 +1,12 @@
 let count = 0;
 
-const CLIENT_ID = "682265920906-vc0mg2l9hvhv36f566ce2mduev2126lf.apps.googleusercontent.com";
-const API_KEY = "AIzaSyBoanGvwf6KXRyvkH_6OJCuhyonksIYvFI";
-const SCOPES = "https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar";
-const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
-let tokenClient;
-let gapiInited = false;
-let gisInited = false;
+// const CLIENT_ID = "682265920906-vc0mg2l9hvhv36f566ce2mduev2126lf.apps.googleusercontent.com";
+// const API_KEY = "AIzaSyBoanGvwf6KXRyvkH_6OJCuhyonksIYvFI";
+// const SCOPES = "https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar";
+// const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
+// let tokenClient;
+// let gapiInited = false;
+// let gisInited = false;
 
 
 let cairaInfoCentro = [
@@ -59,16 +59,17 @@ window.onload=function(){
         cambiarInfoCentro();
     });
 
-    let book = document.getElementById("book");
-    book.addEventListener("click", function(ev){    
-        ev.preventDefault();
-        handleAuthClick();
-    });
+    // let book = document.getElementById("book");
+    // book.addEventListener("click", function(ev){    
+    //     ev.preventDefault();
+    //     handleAuthClick();
+    // });
 }
 
+/*
 function createEvent() {
-    //let email = document.getElementById("email-book").value;
-    //let dateTime = new Date().toISOString();
+    let email = document.getElementById("email-book").value;
+    let dateTime = new Date().toISOString();
 
     let event = {
         'summary': 'Caira Meeting',
@@ -112,10 +113,7 @@ function createEvent() {
     gapi.load('client', intializeGapiClient);
   }
 
-  /**
-   * Callback after the API client is loaded. Loads the
-   * discovery doc to initialize the API.
-   */
+
   async function intializeGapiClient() {
     await gapi.client.init({
       apiKey: API_KEY,
@@ -124,9 +122,7 @@ function createEvent() {
     gapiInited = true;
   }
 
-  /**
-   * Callback after Google Identity Services are loaded.
-   */
+
   function gisLoaded() {
     tokenClient = google.accounts.oauth2.initTokenClient({
       client_id: CLIENT_ID,
@@ -136,9 +132,7 @@ function createEvent() {
     gisInited = true;
   }
 
-  /**
-   *  Sign in the user upon button click.
-   */
+
   function handleAuthClick() {
     tokenClient.callback = async (resp) => {
       if (resp.error !== undefined) {
@@ -157,4 +151,5 @@ function createEvent() {
     }
   }
 
+*/
   

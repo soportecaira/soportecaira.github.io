@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="css/styleNav.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/animation.css">
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
         <noscript>We recomend you to enable scripts to use this webpage</noscript>
         <title>Caira Education</title>
@@ -24,7 +27,7 @@
                     <p><b>Universidad</b></p>
                 </div>
                 <div id="languages">
-                    <p><a href="index.html">EN |</a></p>
+                    <p><a href="centros.html">EN |</a></p>
                     <p class="spanish"><b>ES</b></p>
                 </div>
             </div>
@@ -36,27 +39,15 @@
                 <p>Ponle fácil al estudiante conectar contigo. Ayúdale a crecer personal y profesionalmente.</p>
             </article>
 
-            <div class="form">
-                <form>
-                    <div class="flex">
-                        <h3>Contact with us</h3>
-                        <img class="f-arrow" src="assets/Recursos/flecha-derecha.svg">
-                    </div>
+            <div id="book" class="flex-c">
+                <h3>¿Te gustaría hablar con nosotros?</h3>
 
-                    <div class="flex-c">
-                        <div class="flex-l">
-                            <p>Date:</p>
-                            <p><input type="date" id="date"></p>
-                        </div>
-                        <div class="flex-l">
-                            <p>Time:</p>
-                            <p><input type="time" id="time"></p> 
-                        </div>
-                    </div>
-
-                    <div id="book" class="flex"><div><input type="submit" value="Book a call"></div></div>
-                </form>
+                <div class="flex" id="calendy" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/msanchis2'});return false;">
+                    <img class="icon-s" src="assets/Recursos/calendar.svg"> 
+                    <p>Reserva una llamada</p>
+                </div>
             </div>
+
         </section>
 
         <section class="center-title" id="third">
@@ -66,7 +57,7 @@
             <div id="cards-resp">
                 <div class="flex">
                     <div class="arrow3 left"> <img src="assets/Recursos/flecha-izquierda.svg"> </div>
-                    <div class="info-card back-white text-purple">
+                    <div class="info-card-2 back-white text-purple">
                         <p><img id="in-img" src="assets/Recursos/+student.png"></p>
                         <h3 id="in-title">Consigue estudiantes</h3>
                         <p id="in-sub">Te hacemos un setup y decidimos una estrategia para conseguir estudiantes.</p>
@@ -78,7 +69,7 @@
                 <div class="info-card-2">
                     <p><img src="assets/Recursos/+student.svg"></p>
                     <h3>Consigue estudiantes</h3>
-                    <p>Te hacemos un setup y decidimos una estrategia para conseguir estudiantes.</p>
+                    <p>Decidimos por ti una estrategia para conseguir estudiantes.</p>
                 </div>
                 <div class="info-card-2">
                     <p><img src="assets/Recursos/conex.png"></p>
@@ -179,8 +170,6 @@
     </div>
 </footer>
 <script src="centro.js"></script>
-<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 <script src="partners.js"></script>
 <script src="cognito/register.js"></script>
 <script src="cognito/login.js"></script>
