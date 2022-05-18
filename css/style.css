@@ -572,8 +572,8 @@ footer .ft-text .legal p a {
 
 #center-1 {
   background-image: url("../assets/Recursos/fondo2.png");
-  background-position: left 90% top -10px;
-  background-size: 25%;
+  background-position: left 90% top 10px;
+  background-size: 40%;
 }
 
 #first {
@@ -584,19 +584,19 @@ footer .ft-text .legal p a {
 #second {
   background-image: url("../assets/Recursos/fondo3.png");
   background-size: 30%;
-  background-position: left 100% top -260px;
+  background-position: left 100% top -280px;
 }
 
 #third {
   background-image: url("../assets/Recursos/fondo1.png");
-  background-position: left 5% top 230px;
+  background-position: left 5% top 250px;
   background-size: 40%;
 }
 
 #fifth {
   background-image: url("../assets/Recursos/fondo2.png");
   background-size: 30%;
-  background-position: left 90% top 250px;
+  background-position: left 90% top 300px;
 }
 
 #center-1 {
