@@ -59,12 +59,17 @@ const cambiarMensaje = () =>{
     let star = document.getElementById("op-star");
     let img = document.getElementById("op-img");
 
+    console.log(count)
+    if(count==mensajes.length){
+        count=0;
+    }
+    console.log(count)
+
     let n_txt = document.createTextNode(mensajes[count].message);
     let n_star = document.createTextNode(mensajes[count].stars);
     let n_img = mensajes[count].image;
 
     for(let i=0; i<card.length; i++){
-
         star.removeChild(star.firstChild);
         txt.removeChild(txt.firstChild);
         img.setAttribute("src",n_img);
@@ -77,6 +82,26 @@ const cambiarMensaje = () =>{
             card[i].style.animation = "";
         },500);
     }
+}
+
+const ojito = () => {
+    const togglePassword = document.querySelector('#togglePassword');
+    const text = document.querySelector('#tp-text');
+    const icon = document.querySelector('#tp-icon');
+    const passwords = document.getElementsByClassName("pwd")
+
+    togglePassword.addEventListener('click', function (e) {
+        
+        const type = passwords[0].getAttribute('type') === 'password' ? 'text' : 'password';
+        passwords[0].setAttribute('type', type);
+        passwords[1].setAttribute('type', type);
+
+        const rute = icon.getAttribute('src') === 'assets/Recursos/eye-slash.svg' ? 'assets/Recursos/eye.svg' : 'assets/Recursos/eye-slash.svg';
+        icon.setAttribute("src",rute);
+        
+        const t = text.firstChild.nodeValue === 'Hide password' ? 'Show password' : 'Hide password';
+        text.innerHTML = t;
+    });
 }
 
 window.onload = function(){
@@ -109,6 +134,8 @@ window.onload = function(){
         form.style.height = "450px";
     });
     */
+
+    ojito();
 
     //CARRUSELES:
 

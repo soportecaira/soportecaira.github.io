@@ -134,7 +134,6 @@ section{
     display: -ms-flexbox;
     display: flex;
     align-items: center;
-    margin-left: 2%;
     background-color: rgba(242, 242, 242, 0.5);
     #languages{
         display: -webkit-box;
@@ -517,6 +516,16 @@ footer{
     background-size: 30%;
     background-position: left 90% top 250px;
 }
+
+//ojo password
+#togglePassword {
+    margin-top: -35px;
+    p{
+        margin-top: 15px;
+        margin-left: 5px;
+    } 
+}
+
 
 //Elementos únicos de la pagina de centros
 

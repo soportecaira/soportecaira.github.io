@@ -96,8 +96,11 @@
                         </div>
                         <input id="useremail" type="email" placeholder="Email">
                         <div class="flex">
-                            <input id="userpwd" type="password" placeholder="Password">
-                            <input id="userpwdconf" type="password" placeholder="Confirm Password">
+                            <input id="userpwd" type="password" placeholder="Password" class="pwd">
+                            <input id="userpwdconf" type="password" placeholder="Confirm Password" class="pwd">
+                        </div>
+                        <div id="togglePassword" class="flex">
+                            <img src="assets/Recursos/eye.svg" id="tp-icon"><p id="tp-text">Show password</p>
                         </div>
                         <p id="errorMessage"></p>
                         <input id="signupbtn" type="submit" value="Sign up"><br>
@@ -183,7 +186,7 @@
                         <div class="arrow right"> <img src="assets/Recursos/flecha-derecha.svg"> </div>
                     </div>
                 </div>
-                <div class="flex"><a href="#form-2"><button class="purple">Join us</button></a></div>
+                <div class="flex"><button class="purple"><a href="#form-2">Join us</a></button></div>
             </section>
 
             <section id="metaverso">
