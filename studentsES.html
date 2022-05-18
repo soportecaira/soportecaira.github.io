@@ -96,14 +96,11 @@
                         </div>
                         <input id="useremail" type="email" placeholder="Email">
                         <div class="flex">
-                            <div class="pwd">
-                                <input id="userpwd password" type="password" placeholder="Password">
-                                <div class="eye eye-slash" id="togglePassword"></div>
-                            </div>
-                            <div class="pwd">
-                                <input id="userpwdconf password" type="password" placeholder="Confirm Password">
-                                <div class="eye eye-slash" id="togglePassword"></div>
-                            </div>
+                            <input id="userpwd" type="password" placeholder="Password" class="pwd">
+                            <input id="userpwdconf" type="password" placeholder="Confirm Password" class="pwd">
+                        </div>
+                        <div id="togglePassword" class="flex">
+                            <img src="assets/Recursos/eye.svg" id="tp-icon"><p id="tp-text">Show password</p>
                         </div>
                         <p id="errorMessage"></p>
                         <input id="signupbtn" type="submit" value="Regístrate"><br>
