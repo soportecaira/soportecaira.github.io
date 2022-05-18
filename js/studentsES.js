@@ -19,20 +19,20 @@ let mensajes = [
 
 let cairaInfo = [
     {
-        title: "Information",
-        subtitle: "Discover all the avialiable options",
+        title: "Información",
+        subtitle: "Descubre todas las opciones disponibles",
         image: "assets/Recursos/Informate.png"
     },{
-        title: "Interact",
-        subtitle: "Know the experiences of former students",
+        title: "Interactua",
+        subtitle: "Conoce las opiniones de antiguos alumnos",
         image: "assets/Recursos/Interactua.png"
     },{
-        title: "Compare",
-        subtitle: "Assess the advantages and disadvantages",
+        title: "Compara",
+        subtitle: "Encuentra las ventajas y desventajas",
         image: "assets/Recursos/Compara.png"
     },{
-        title: "Hop up!",
-        subtitle: "Collect all you need and go on an adventure!",
+        title: "¡Lánzate!",
+        subtitle: "Coge lo que necesites y salta a la aventura",
         image: "assets/Recursos/Lanzate.png"
     }
 ];
@@ -104,40 +104,8 @@ const ojito = () => {
     });
 }
 
-window.onload = function(){
-    /*
-    //MENU HAMBURGUESA:
-
-    let logo = document.querySelector('.container');
-    let menu = document.querySelector('.menu');
-    logo.addEventListener('click',function(){
-        menu.classList.toggle('mobile');
-        menu.classList.toggle('showmenu');  
-    });
-
-    //ENLACE LOGIN - REGISTRO :
-
-    let goToRegister = document.getElementById("a-form1");
-    let goToLogin = document.getElementById("a-form2");
-    let login = document.getElementById("form-1");
-    let register = document.getElementById("form-2");
-    let form = document.getElementsByClassName("form")[0];
-
-    goToRegister.addEventListener("click",function(){
-        login.style.display = "none";
-        register.style.display = "block";
-        form.style.height = "540px";
-    });
-    goToLogin.addEventListener("click",function(){
-        login.style.display = "block";
-        register.style.display = "none";
-        form.style.height = "450px";
-    });
-    */
-
+window.onload= function(){
     ojito();
-
-    //CARRUSELES:
 
     let arrows = document.getElementsByClassName("arrow");
     let arrows2 = document.getElementsByClassName("arrow2");
