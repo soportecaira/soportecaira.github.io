@@ -259,6 +259,9 @@
     #first article{
         padding-bottom: 50px !important;
     }
+    #second {
+        margin-top: 90px;
+    }
     #center-1 article{
         height: 500px;
     }
@@ -354,9 +357,30 @@
         flex-direction: column;
         height: 400px;
     }
-
     footer .ft-text div {
-        margin-left: 30px;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    footer .ft-text .legal p {
+        margin: 0 !important;
+        width: 180px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center !important;
+    }
+    footer .ft-text .social a {
+        margin-top: 13px;
+        margin-right: 0px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center !important;
+    }
+    footer .ft-text .social a img {
+        margin: 10px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center !important;
     }
     .pages .links {
         display: flex;
