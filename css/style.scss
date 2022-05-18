@@ -11,6 +11,10 @@ $shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 *{
     box-sizing: border-box;
+    &:focus,&:visited{
+        outline: none;
+        color: $cairaPurple;
+    }
 }
 body{
     top: 0;
@@ -40,6 +44,8 @@ h2{
 h3{
     font-size: 34px;
 }
+
+
 .center-title{
     h1,h2,h3,p{
         text-align: center;
