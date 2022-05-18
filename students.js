@@ -60,7 +60,7 @@ const cambiarMensaje = () =>{
     let img = document.getElementById("op-img");
 
     console.log(count)
-    if(count==mensajes.length){
+    if(count>=mensajes.length){
         count=0;
     }
     console.log(count)
@@ -98,7 +98,7 @@ const ojito = () => {
 
         const rute = icon.getAttribute('src') === 'assets/Recursos/eye-slash.svg' ? 'assets/Recursos/eye.svg' : 'assets/Recursos/eye-slash.svg';
         icon.setAttribute("src",rute);
-        
+
         const t = text.firstChild.nodeValue === 'Hide password' ? 'Show password' : 'Hide password';
         text.innerHTML = t;
     });
@@ -151,7 +151,7 @@ window.onload = function(){
     });
     arrows[1].addEventListener("click", function(){
         count++;
-        if(count==mensajes.length){
+        if(count>=mensajes.length){
             count=0;
         }
         
@@ -167,7 +167,7 @@ window.onload = function(){
     });
     arrows2[1].addEventListener("click", function(){
         count2++;
-        if(count2==cairaInfo.length){
+        if(count2>=cairaInfo.length){
             count2=0;
         }
         console.log(cairaInfo.length)
