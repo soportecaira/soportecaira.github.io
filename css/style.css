@@ -68,7 +68,11 @@ button.purple {
 }
 
 button:hover {
-  font-size: 25px;
+  cursor: pointer;
+  color: #f2f2f2 !important;
+  background: -webkit-gradient(linear, left top, right top, from(#252859), to(#fb95f3));
+  background: linear-gradient(to right, #252859, #fb95f3);
+  border: 2px solid #f2f2f2;
 }
 
 button a {
@@ -125,8 +129,18 @@ section {
   height: auto;
 }
 
+.pages {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .pages p {
-  margin-top: 33px;
+  margin-top: 32px;
   margin-right: 20px;
   font-size: 30px;
 }
@@ -135,10 +149,18 @@ section {
   text-decoration: none;
 }
 
+.pages p a:focus {
+  color: #fb95f3;
+}
+
 .header {
+  height: 96px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 2%;
   background-color: rgba(242, 242, 242, 0.5);
 }
@@ -147,13 +169,19 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .header .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header .links:focus {
+  color: #fb95f3;
 }
 
 .form {
@@ -197,11 +225,17 @@ section {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  width: 300px;
+  width: 100%;
   margin-left: 2%;
   height: 40px;
   font-size: 20px;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   border: none;
 }
@@ -215,10 +249,6 @@ section {
   margin-left: 2%;
 }
 
-.form .google:hover {
-  font-weight: bold;
-}
-
 .form input {
   margin-bottom: 30px;
   margin-left: 5px;
@@ -229,7 +259,7 @@ section {
   background-color: #fb95f3;
   color: #252859;
   border-radius: 20px;
-  width: 140px;
+  width: 100%;
   height: 40px;
   margin-left: 2%;
   margin-right: auto;
@@ -238,7 +268,10 @@ section {
 }
 
 .form input[type='submit']:hover {
-  font-weight: bold;
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#252859), to(#fb95f3));
+  background: linear-gradient(to left, #252859, #fb95f3);
+  color: #f2f2f2;
 }
 
 .form input[type="text"], .form input[type="password"], .form input[type="email"] {
@@ -577,8 +610,8 @@ footer .ft-text .legal p a {
 
 #center-1 {
   background-image: url("../assets/Recursos/fondo2.png");
-  background-position: left 90% top 10px;
-  background-size: 40%;
+  background-position: left 90% top -10px;
+  background-size: 25%;
 }
 
 #first {
@@ -589,19 +622,19 @@ footer .ft-text .legal p a {
 #second {
   background-image: url("../assets/Recursos/fondo3.png");
   background-size: 30%;
-  background-position: left 100% top -280px;
+  background-position: left 100% top -260px;
 }
 
 #third {
   background-image: url("../assets/Recursos/fondo1.png");
-  background-position: left 5% top 250px;
+  background-position: left 5% top 230px;
   background-size: 40%;
 }
 
 #fifth {
   background-image: url("../assets/Recursos/fondo2.png");
   background-size: 30%;
-  background-position: left 90% top 300px;
+  background-position: left 90% top 250px;
 }
 
 #center-1 {

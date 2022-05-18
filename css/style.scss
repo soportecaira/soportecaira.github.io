@@ -69,7 +69,12 @@ button{
         color: $cairaPurple;
     }
     &:hover{
-        font-size: 25px;
+        cursor: pointer;
+        color: $cairaWhite !important;
+        //font-weight: bold;
+        background: -webkit-gradient(linear, right top, left top, from($cairaPurple), to($cairaPink));
+        background: linear-gradient(to right, $cairaPurple, $cairaPink);
+        border: 2px solid $cairaWhite;
     }
     a{
         text-decoration: none;
@@ -107,26 +112,41 @@ section{
 }
 
 .pages{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
     p{
-        margin-top: 33px;
+        margin-top: 32px;
         margin-right: 20px;
         font-size: 30px;
         a{
             text-decoration: none;
+            &:focus {
+                color: $cairaPink;
+            }
         }
     }
 }
 
 .header{
+    height: 96px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    align-items: center;
     margin-left: 2%;
-    background-color: rgba(242,242,242,0.5);
+    background-color: rgba(242, 242, 242, 0.5);
     #languages{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        margin-left: 50px;
+        justify-content: end;
     }
     .links{
         display: flex;
+        &:focus {
+            color: $cairaPink;
+        }
     }
 }
 
@@ -162,11 +182,13 @@ section{
         background-color: white;
         border-radius: 20px;
         margin-bottom: 20px;
-        width: 300px;
+        width: 100%;
         margin-left: 2%;
         height: 40px;
         font-size: 20px;
         padding: 5px;
+        display: flex;
+        justify-content: center;
         text-align: center;
         border: none;
         a{
@@ -174,9 +196,6 @@ section{
             color: $cairaPurple;
             display: flex;
             margin-left: 2%;
-        }
-        &:hover{
-            font-weight: bold;
         }
     }
     input{
@@ -187,14 +206,17 @@ section{
             background-color: $cairaPink;
             color: $cairaPurple;
             border-radius: 20px;
-            width: 140px;
+            width: 100%;
             height: 40px;
             margin-left: 2%;
             margin-right: auto;
             font-size: 20px;
             border: none;
             &:hover{
-                font-weight: bold;
+                cursor: pointer;
+                background: -webkit-gradient(linear, right top, left top, from($cairaPurple), to($cairaPink));
+                background: linear-gradient(to left, $cairaPurple, $cairaPink);
+                color: $cairaWhite
             }
         }
         &[type="text"],&[type="password"],&[type="email"]{
@@ -472,8 +494,8 @@ footer{
 }
 #center-1{
     background-image: url("../assets/Recursos/fondo2.png");
-    background-position: left 90% top 10px;
-    background-size: 40%;
+    background-position: left 90% top -10px;
+    background-size: 25%;
 }
 #first{
     background-image: url("../assets/Recursos/video.gif");
@@ -483,17 +505,17 @@ footer{
 #second{
     background-image: url("../assets/Recursos/fondo3.png");
     background-size: 30%;
-    background-position: left 100% top -280px;
+    background-position: left 100% top -260px;
 }
 #third{
     background-image: url("../assets/Recursos/fondo1.png");
-    background-position: left 5% top 250px;
+    background-position: left 5% top 230px;
     background-size: 40%;
 }
 #fifth{
     background-image: url("../assets/Recursos/fondo2.png");
     background-size: 30%;
-    background-position: left 90% top 300px;
+    background-position: left 90% top 250px;
 }
 
 //Elementos únicos de la pagina de centros
