@@ -20,13 +20,10 @@ if (result.id_token) {
   );
 
   var data = JSON.parse(jsonPayload);
-  console.log(data);
+
   message.innerHTML = "Thank you for registering " + data.given_name;
 }
 
-if(result.name){
-    result.name.replace("%20"," ");
-    message.innerHTML = "Thank you for registering " + result.name;
-};
+result.name && (message.innerHTML = "Thank you for registering " + result.name.replace("%20"," "));
 
-result.validated ? message.innerHTML = "Your email " + result.mail + " is already validated!" : '';
+result.validated && (message.innerHTML = "Your email " + result.mail + " is already validated!");
