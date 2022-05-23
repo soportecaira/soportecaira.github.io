@@ -24,6 +24,9 @@ if (result.id_token) {
   message.innerHTML = "Thank you for registering " + data.given_name;
 }
 
-result.name && (message.innerHTML = "Thank you for registering " + result.name.replace("%20"," "));
+result.name &&
+  (message.innerHTML =
+    "Thank you for registering " + result.name.replaceAll("%20", " "));
 
-result.validated && (message.innerHTML = "Your email " + result.mail + " is already validated!");
+result.validated &&
+  (message.innerHTML = "Your email " + result.mail + " is already validated!");
