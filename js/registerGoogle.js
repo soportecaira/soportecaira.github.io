@@ -20,8 +20,10 @@ if (result.id_token) {
   );
 
   var data = JSON.parse(jsonPayload);
-
+  console.log(data);
   message.innerHTML = "Thank you for registering " + data.email;
 }
 
-result.username ? message.innerHTML = "Thank you for registering " + result.username : '';
+result.name ? message.innerHTML = "Thank you for registering " + result.name : '';
+
+result.validated ? message.innerHTML = "Your email " + result.mail + " is already validated!" : '';
