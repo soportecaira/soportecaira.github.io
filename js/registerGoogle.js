@@ -8,7 +8,8 @@ var result = hash.split("&").reduce(function (res, item) {
   return res;
 }, {});
 
-console.log("Result: " + result.toString());
+console.log("Result: " + JSON.stringify(result));
+console.log("Result name: " + result.username);
 
 if (result.id_token) {
   var base64Url = result.id_token.split(".")[1];
@@ -25,9 +26,8 @@ if (result.id_token) {
   var data = JSON.parse(jsonPayload);
 
   message.innerHTML = "Thank you for registering " + data.email;
+  console.log("Data: " + data.toString());
 }
-
-console.log("Data: " + data.toString());
 
 result.username &&
   message.innerHTML == "Thank you for registering " + result.username;
