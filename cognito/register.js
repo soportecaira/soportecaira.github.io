@@ -6,6 +6,30 @@ var message;
 var regexSpecialCharacters;
 var userpwd;
 
+async function mailValid() {
+    const r = await getMailVerify().then(function(data){
+        let emailData = data.data;
+        console.log(emailData);
+        //Validaciones correo
+        if(emailData.score < 50 || emailData.gibberish || !emailData.regexp || emailData.result=="undeliverable"){
+            return false;
+        }
+        return true;
+    });
+    return r;
+}
+
+async function getMailVerify() {
+    try{
+        const api = "https://api.hunter.io/v2/email-verifier?email=patrick@stripe.com&api_key=782a8a231dfdbbce032787682b8e6b5b6a8ef21c";
+        const response = await fetch(api);
+        return response.json();
+    }
+    catch{
+        alert("Error de red");
+    };
+  }
+
 function registerButton() {
     email = document.getElementById("useremail").value;
     userpwd = document.getElementById("userpwd");
@@ -20,6 +44,11 @@ function registerButton() {
         message.style.display="block";
         message.innerHTML="The surname cannot be empty.";
         return false;
+    }
+    else if(!mailValid()) {
+            message.style.display="block";
+            message.innerHTML="Email not valid.";
+            return false;
     }else {
         userName = document.getElementById("username").value + ' ' + document.getElementById("usersurname").value;
     }

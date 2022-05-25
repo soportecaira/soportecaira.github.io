@@ -123,7 +123,8 @@
                         <input type="hidden" name="_next" value={window.location.href}></input>
                         <textarea name="message"></textarea>
                         <p><input type="checkbox">I agree with terms and conditions</p>
-                        <button type="submit" class="purple" id="send-contact">Send </button>
+                        <button class="g-recaptcha" data-sitekey="6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM" data-callback='onSubmit' data-action='submit'>I am not a robot</button>
+                            <button type="submit" class="purple" id="send-contact" style="display: none;">Send</button>
                     </form>
                 </div>
 
@@ -172,5 +173,16 @@
 <script src="js/partners.js"></script>
 <script src="cognito/register.js"></script>
 <script src="cognito/login.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
+<script>
+grecaptcha.enterprise.ready(function() {grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {});});
+function onSubmit(token) {
+    document.getElementById("send-contact").style.display = "block";
+    document.getElementsByClassName("g-recaptcha")[0].style.display = "none";
+}
+</script>
 </body>
 </html>

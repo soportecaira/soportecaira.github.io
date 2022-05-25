@@ -232,7 +232,8 @@
                             <input type="hidden" name="_next" value={window.location.href}/>
                             <textarea name="message"></textarea>
                             <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
-                            <button type="submit" class="purple" id="send-contact">Enviar</button>
+                            <button class="g-recaptcha" data-sitekey="6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM" data-callback='onSubmit' data-action='submit'>I am not a robot</button>
+                            <button type="submit" class="purple" id="send-contact" style="display: none;">Send</button>
                         </form>
                     </div>
 
@@ -285,5 +286,16 @@
         <script src="cognito/registro.js"></script>
         <script src="cognito/login.js"></script>
         <script>AOS.init();</script>
+
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
+        <script>
+        grecaptcha.enterprise.ready(function() {grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {});});
+        function onSubmit(token) {
+            document.getElementById("send-contact").style.display = "block";
+            document.getElementsByClassName("g-recaptcha")[0].style.display = "none";
+        }
+        </script>
     </body>
 </html>

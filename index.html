@@ -25,35 +25,6 @@
     </head>
 
     <body>
-        <!-- POSIBLE MENU HAMBURGUESA: -->
-
-        <!--
-        <header>
-            <a href=""><img src="assets/account.png" alt="" class="account-logo"></a> 
-            <div class="container">
-                <div class="menulogo"><img src="assets/hamburger.png" class="hamburger-logo" alt=""></div>
-            </div>
-        </header>
-        !-->
-
-        <!-- 
-        <ul class="mobile menu">
-            <li><a href="#">Estudiante</a></li>
-            <li><a href="#">Universidades</a></li>
-            <li><a href="#">Iniciar Sesión</a></li>
-            <li><a href="#" class="button">Regístrate</a></li>
-            <span class="language-select">
-                <p>ES</p>
-                <p class="en-button">| EN</p>
-            </span>
-            <span class="social-media">
-                <a href=""><img src="assets/instagram.png" alt="" class="social-logos"></a>
-                <a href=""><img src="assets/facebook.png" alt="" class="social-logos"></a>
-                <a href=""><img src="assets/linkedin.png" alt="" class="linkedin social-logos"></a>
-            </span>
-        </ul>
-    -->
-
         <main>
             <div class="header">
                 <div ><img src="assets/Logo-gradiente.png "class="logo"></div>
@@ -290,17 +261,10 @@
         <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
         <script>
         grecaptcha.enterprise.ready(function() {grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {});});
-        /*
-        function onClick(e) {
-            e.preventDefault();
-            grecaptcha.ready(function() {grecaptcha.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'submit'}).then(function(token) {});});
-        }*/
-
         function onSubmit(token) {
             document.getElementById("send-contact").style.display = "block";
             document.getElementsByClassName("g-recaptcha")[0].style.display = "none";
         }
         </script>
-         
     </body>
 </html>

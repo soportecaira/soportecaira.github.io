@@ -526,6 +526,16 @@ footer{
     } 
 }
 
+//captcha
+.g-recaptcha{
+    border: 2px solid $cairaPurple !important;
+    &:focus{
+      border: 2px solid green !important;
+      color: green !important;
+      background: $cairaWhite !important;
+    }
+}
+
 
 //Elementos únicos de la pagina de centros
 
