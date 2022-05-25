@@ -115,18 +115,20 @@
             <div class="flex-lc">
                 <div class="bottom">
                     
-                    <form id="contact-form" action="https://formsubmit.co/caira@caira.io" method="POST">
-                        <input type="text" placeholder="Nombre y apellidos"><br>
-                        <input type="text" name="email" placeholder="Correo electrónico"><br>
-                        <input type="hidden" name="_captcha" value="false"/>
-                        <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/>
-                        <input type="hidden" name="_template" value="table"/>
-                        <input type="hidden" name="_next" value={window.location.href}/>
-                        <textarea name="message"></textarea>
-                        <p><input type="checkbox">Acepto el Aviso Legal y la Política de Privacidad</p>
-                        <button class="g-recaptcha" data-sitekey="6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM" data-callback='onSubmit' data-action='submit'>I am not a robot</button>
-                        <button type="submit" class="purple" id="send-contact" style="display: none;">Send</button>
-                    </form>
+                        <!-- <form id="contact-form" action="https://formsubmit.co/d61905f59f518a13f085e38383495b83" method="POST"> -->
+                            <form id="contact-form">
+                                <input type="text" placeholder="Name"><br>
+                                <input type="text" name="email" placeholder="Email"><br>
+                                <!-- <input type="hidden" name="_captcha" value="false"/> -->
+                                <!-- <input type="hidden" name="_subject" value="Nuevo correo desde la web!"/> -->
+                                <!-- <input type="hidden" name="_template" value="table"/> -->
+                                <!-- <input type="hidden" name="_next" value={window.location.href}></input> -->
+                                <textarea name="message"></textarea>
+                                <p><input type="checkbox">I agree with terms and conditions</p>
+                                <!-- <button class="g-recaptcha" data-sitekey="6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM" data-callback='onSubmit' data-action='submit'>I am not a robot</button> -->
+                                <!-- <button type="submit" class="purple" id="send-contact" style="display: none;">Send</button> -->
+                                <button type="submit" class="purple" id="send-contact">Send</button>
+                            </form>
                 </div>
 
                 <div class="bottom" id="b2">
@@ -175,7 +177,7 @@
 <script src="cognito/register.js"></script>
 <script src="cognito/login.js"></script>
 
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
 <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
 <script>
@@ -184,6 +186,6 @@ function onSubmit(token) {
     document.getElementById("send-contact").style.display = "block";
     document.getElementsByClassName("g-recaptcha")[0].style.display = "none";
 }
-</script>
+</script> -->
 </body>
 </html>
