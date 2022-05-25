@@ -285,26 +285,32 @@
         <script src="cognito/register.js"></script>
         <script src="cognito/login.js"></script>
         <script> AOS.init(); </script>
+
         <script src="https://www.google.com/recaptcha/api.js"></script>
         <script src="https://www.google.com/recaptcha/api.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
         <script>
-            function onClick(e) {
-              e.preventDefault();
-              grecaptcha.ready(function() {
-                grecaptcha.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'submit'}).then(function(token) {
-                    // Add your logic to submit to your backend server here.
-                    document.getElementById("send-contact").style.display = "block";
-                    
-                });
+        grecaptcha.enterprise.ready(function() {
+            grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {
+
+            });
+        });
+
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'submit'}).then(function(token) {
+                  // Add your logic to submit to your backend server here.
+                  document.getElementById("send-contact").style.display = "block";
+                  
               });
-            }
+            });
+          }
+
+          function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+          }
         </script>
-      
-        <script>
-            function onSubmit(token) {
-              document.getElementById("demo-form").submit();
-            }
-          </script>
          
     </body>
 </html>
