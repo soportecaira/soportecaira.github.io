@@ -283,6 +283,13 @@
         <script src="cognito/register.js"></script>
         <script src="cognito/login.js"></script>
         <script> AOS.init(); </script>
-
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
+        <script>
+        grecaptcha.enterprise.ready(function() {
+            grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {
+                
+            });
+        });
+        </script>
     </body>
 </html>
