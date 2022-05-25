@@ -290,11 +290,11 @@
         <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM"></script>
         <script>
         grecaptcha.enterprise.ready(function() {grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {});});
-
+        /*
         function onClick(e) {
             e.preventDefault();
             grecaptcha.ready(function() {grecaptcha.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'submit'}).then(function(token) {});});
-        }
+        }*/
 
         function onSubmit(token) {
             document.getElementById("send-contact").style.display = "block";
