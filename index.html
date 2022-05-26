@@ -264,7 +264,7 @@
         <script>
         grecaptcha.enterprise.ready(function() {grecaptcha.enterprise.execute('6LfThBkgAAAAAIJImYxYhIwWfbrHtwjScZrazDXM', {action: 'login'}).then(function(token) {});});
         function onSubmit(token) {
-            let honeypot = document.getElementById("contact-me").value;
+            let honeypot = document.getElementById("contact-me").checked;
             console.log(honeypot)
             if(!honeypot){
                 let sendB = document.getElementsByClassName("send")[0];
