@@ -415,6 +415,14 @@ footer{
 }
 
 #contact-form{
+    #contact-me{
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        margin-left: -10px;
+    }
     input{
         &[type="text"],&[type="email"]{
             width: 90%;

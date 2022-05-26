@@ -520,6 +520,16 @@ footer .ft-text .legal p a {
   margin-bottom: 40px;
 }
 
+#contact-form #contact-me {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-form button {
+  margin-left: -10px;
+}
+
 #contact-form input[type="text"], #contact-form input[type="email"] {
   width: 90%;
   border-radius: 30px;
